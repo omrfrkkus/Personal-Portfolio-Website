@@ -4,7 +4,7 @@ import 'package:omerfarukkus_flutter_website/services/locale_service.dart';
 import 'package:provider/provider.dart';
 import 'util.dart';
 import 'theme.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());

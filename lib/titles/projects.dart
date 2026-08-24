@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../l10n/app_localizations.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/adam.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/gorilla.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/johnny.dart';
@@ -182,7 +182,7 @@ class Projects extends StatelessWidget {
         );
       case 'Pencil 2D Platformer Game':
         return const Pencil(
-          height: 400,
+          height: 900,
         );
       default:
         return const Gorilla(

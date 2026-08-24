@@ -6,7 +6,7 @@ import 'package:omerfarukkus_flutter_website/titles/contact.dart';
 import 'package:omerfarukkus_flutter_website/titles/projects.dart';
 import 'package:omerfarukkus_flutter_website/titles/sports.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
