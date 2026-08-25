@@ -39,3 +39,12 @@ flutter pub get
 
 # Run the project (Chrome/Web)
 flutter run -d chrome
+
+```
+
+---
+
+## 📬 Contact
+
+* **Email:** [omerfaruk.kus@outlook.com](https://www.google.com/search?q=mailto%3Aomerfaruk.kus%40outlook.com)
+* **LinkedIn:** [linkedin.com/in/omrfrkkus](https://www.google.com/search?q=https://linkedin.com/in/omrfrkkus)
