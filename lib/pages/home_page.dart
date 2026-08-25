@@ -44,8 +44,12 @@ class _HomePageState extends State<HomePage> {
                   onTap: () => scrollToSection(aboutKey),
                   child: const Text('Ömer Faruk Kuş')),
               actions: [
-                DropdownButton(
+                DropdownButton<String>(
                   value: localeService.currentLocale.languageCode,
+                  // Add these two lines to fix the UI issue:
+                  underline: const SizedBox(),
+                  focusColor: Colors.transparent,
+
                   onChanged: (value) {
                     localeService.changeLocale(value!);
                   },
