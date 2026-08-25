@@ -222,7 +222,7 @@ class _HomePageState extends State<HomePage> {
                       TextButton(
                           onPressed: () {
                             _launchURL(
-                                'https://github.com/omrfrkkus/Personal-Portfolio-Website-Flutter');
+                                'https://github.com/omrfrkkus/Personal-Portfolio-Website');
                           },
                           child: const Text('Source Code'))
                     ],
