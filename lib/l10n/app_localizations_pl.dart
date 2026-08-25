@@ -9,7 +9,7 @@ class AppLocalizationsPl extends AppLocalizations {
   AppLocalizationsPl([String locale = 'pl']) : super(locale);
 
   @override
-  String get about => 'O projekcie';
+  String get about => 'O mnie';
 
   @override
   String get projects => 'Projekty';
@@ -27,13 +27,14 @@ class AppLocalizationsPl extends AppLocalizations {
   String get resume => 'CV';
 
   @override
-  String get click_more => 'Kliknij, aby uzyskać więcej informacji';
+  String get click_more => 'Kliknij, aby dowiedzieć się więcej';
 
   @override
   String get close => 'Zamknij';
 
   @override
-  String get all_rights => 'Wszystkie prawa zastrzeżone. Opracowane z Flutter.';
+  String get all_rights =>
+      'Wszelkie prawa zastrzeżone. Stworzone we Flutterze.';
 
   @override
   String project_description(String projects) {
@@ -41,13 +42,15 @@ class AppLocalizationsPl extends AppLocalizations {
       projects,
       {
         'gorilla':
-            'Używając Fluttera, opracowałem i opublikowałem aplikację Street Workout z obsługą wielu języków, profesjonalnymi bazami danych treningowych i animacjami. Aplikacja ma ponad tysiąc pobrań w Google Play Store.',
+            'Kompleksowa aplikacja fitness stworzona samodzielnie przy użyciu technologii Flutter. Zawiera skalowalną architekturę wielojęzyczną, niestandardowe animacje UI/UX oraz solidne lokalne bazy danych dla profesjonalnych planów treningowych. Dostępna w Google Play z ponad 1000 pobrań.',
         'adam':
-            'Opracowałem humanoidalną AI przy użyciu Pythona i Google Vertex AI. Robot integruje komponenty sprzętowe, takie jak serwomotory i Arduino, do kontrolowania ruchu. Dodatkowo przeprowadziłem dostosowywanie różnych modeli AI, w tym zarówno modeli opartych na chmurze, jak i offline, aby poprawić jego zdolności w zakresie rozpoznawania mowy, obiektów i twarzy.',
+            'Zaawansowany, autorski robot humanoidalny demonstrujący koncepcję Embodied AI. Zaprojektowałem niskolatencyjną architekturę edge-computing w C++/Python, aby zsynchronizować chmurowe modele LLM (Gemini/Ollama) i lokalną pamięć RAG z ponad 20 serwomotorami poprzez sieć UDP.',
         'johnny':
-            'Opracowałem humanoidalną AI przy użyciu Pythona i Google Vertex AI, integrując serwomotory i Arduino do ruchu. Dostosowane modele AI dla lepszego rozpoznawania mowy, obiektów i twarzy.',
+            'Robot humanoidalny napędzany sztuczną inteligencją, zbudowany na platformie INMOOV. Stworzyłem potok komunikacyjny UART (Python-Arduino), aby płynnie synchronizować konwersacyjne odpowiedzi Google Vertex AI oraz syntezę mowy z fizycznymi gestami w czasie rzeczywistym.',
         'pencil':
-            'Gra platformowa 2D na wiele platform, opracowana przy użyciu Godot.',
+            'Wieloplatformowa gra platformowa 2D stworzona w silniku Godot, przygotowywana do komercyjnego wydania. Stworzona w 100% samodzielnie, zawiera autorski pixel art, niestandardową fizykę kinematyczną oraz zoptymalizowane zarządzanie stanem.',
+        'speaker':
+            'Zaprojektowałem i zbudowałem od podstaw autorski głośnik Bluetooth. Połączyłem modelowanie 3D CAD, precyzyjne obliczenia pojemności wewnętrznej (1L) oraz cyfrowe przetwarzanie sygnału (DSP), aby zapewnić dźwięk wysokiej jakości (high-fidelity) przy użyciu dwóch przetworników i głośnika wysokotonowego.',
         'other': 'Opis projektu niedostępny.',
       },
     );

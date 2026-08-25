@@ -11,11 +11,11 @@ class Adam extends StatelessWidget {
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
-        itemCount: 1,
+        itemCount: 3,
         itemBuilder: (_, index) {
           return Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Image.asset('images/adam$index.png'),
+            child: Image.asset('images/adam$index.jpg'),
           );
         },
       ),

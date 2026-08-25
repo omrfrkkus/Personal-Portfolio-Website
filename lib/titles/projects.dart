@@ -22,7 +22,7 @@ class Projects extends StatelessWidget {
     {
       'title': 'Adam the Humanoid',
       'key': 'adam',
-      'image': 'images/adam0.png',
+      'image': 'images/adam0.jpg',
     },
     {
       'title': 'Johnny the Humanoid',
@@ -32,7 +32,7 @@ class Projects extends StatelessWidget {
     {
       'title': 'Pencil 2D Platformer Game',
       'key': 'pencil',
-      'image': 'images/pencil_cover.png',
+      'image': 'images/pencil.gif',
     },
   ];
 

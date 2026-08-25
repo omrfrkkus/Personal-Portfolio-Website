@@ -41,13 +41,15 @@ class AppLocalizationsTr extends AppLocalizations {
       projects,
       {
         'gorilla':
-            'Flutter kullanarak, çok dilli destek, profesyonel eğitim veritabanları ve animasyonlarla Street Workout uygulamasını geliştirdim ve yayımladım. Uygulama, Google Play Store\'da binlerce indirme aldı.',
+            'Flutter kullanılarak tek başıma geliştirilen kapsamlı bir fitness uygulaması. Ölçeklenebilir çok dilli mimari, özel UI/UX animasyonları ve profesyonel antrenman programları için güçlü yerel veritabanları içerir. Şu anda Google Play\'de 1.000\'den fazla indirmeye sahip.',
         'adam':
-            'Python ve Google Vertex AI kullanarak bir humanoid AI geliştirdim. Robot, hareket kontrolü için servo motorlar ve Arduino gibi donanım bileşenlerini entegre ediyor. Ayrıca, konuşma, nesne ve yüz tanıma yeteneklerini geliştirmek için hem bulut tabanlı hem de çevrimdışı çeşitli AI modellerini ince ayar yaptım.',
+            'Embodied AI (Somutlaştırılmış Yapay Zeka) konseptini sergileyen, sıfırdan üretilmiş gelişmiş bir insansı robot. Bulut tabanlı LLM\'leri (Gemini/Ollama) ve yerelleştirilmiş RAG belleğini UDP ağı üzerinden 20\'den fazla servo motorla senkronize etmek için düşük gecikmeli C++/Python edge-computing mimarisi tasarlandı.',
         'johnny':
-            'Python ve Google Vertex AI kullanarak bir humanoid AI geliştirdim ve hareket için servo motorlar ile Arduino\'yu entegre ettim. Ses, nesne ve yüz tanıma için iyileştirilmiş AI modelleri ayarlandı.',
+            'INMOOV platformu üzerine inşa edilmiş, yapay zeka destekli bir insansı robot. Google Vertex AI konversasyonel yanıtlarını ve metinden sese (TTS) çıktılarını gerçek zamanlı fiziksel jestlerle sorunsuz bir şekilde senkronize etmek için Python\'dan Arduino\'ya bir UART haberleşme hattı geliştirildi.',
         'pencil':
-            'Godot kullanarak geliştirilen çok platformlu 2D platform oyunu.',
+            'Ticari sürüme hazırlanan, Godot Engine ile geliştirilmiş çok platformlu bir 2D platform oyunu. %100 özgün piksel sanatı, özel kinematik fizik ve optimize edilmiş durum yönetimi (state management) ile tamamen tek başıma geliştirildi.',
+        'speaker':
+            'Sıfırdan özel bir Bluetooth akustik hoparlör tasarlandı ve üretildi. Çift sürücü ve bir tweeter aracılığıyla yüksek sadakatli (Hi-Fi) ses sunmak için 3D CAD modelleme, hassas iç hacim hesaplamaları (1L) ve Dijital Sinyal İşleme (DSP) bir araya getirildi.',
         'other': 'Proje açıklaması mevcut değil.',
       },
     );

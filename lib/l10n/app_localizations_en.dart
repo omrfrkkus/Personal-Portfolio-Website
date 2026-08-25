@@ -41,12 +41,15 @@ class AppLocalizationsEn extends AppLocalizations {
       projects,
       {
         'gorilla':
-            'Using Flutter, I developed and published a Street Workout app with multi-language support, professional training databases, and animations. The app has over a thousand downloads on Google Play Store.',
+            'A comprehensive fitness application solo-developed using Flutter. Features a scalable multi-language architecture, custom UI/UX animations, and robust local databases for professional training regimens. Currently live on Google Play with over 1,000 downloads.',
         'adam':
-            'I developed a humanoid AI using Python and Google Vertex AI. The robot integrates hardware components such as servo motors and Arduino for movement control. Additionally, I performed fine-tuning on various AI models, including both cloud-based and offline models, to enhance its speech, object, and face recognition capabilities.',
+            'An advanced, custom-built humanoid robot demonstrating Embodied AI. Engineered a low-latency C++/Python edge-computing architecture to synchronize cloud LLMs (Gemini/Ollama) and localized RAG memory with 20+ servo motors via UDP networking.',
         'johnny':
-            'I developed a humanoid AI using Python and Google Vertex AI, integrating servo motors and Arduino for movement. Fine-tuned AI models for improved speech, object, and face recognition.',
-        'pencil': 'A 2D multiplatform platformer game developed using Godot.',
+            'An AI-driven humanoid robot built on the INMOOV platform. Developed a Python-to-Arduino UART pipeline to seamlessly synchronize Google Vertex AI conversational responses and text-to-speech outputs with real-time physical gestures.',
+        'pencil':
+            'A multi-platform 2D platformer built in the Godot Engine for an upcoming commercial release. Developed entirely solo, featuring 100% custom pixel art, custom kinematic physics, and optimized state management.',
+        'speaker':
+            'Engineered a custom Bluetooth acoustic speaker from scratch. Combined 3D CAD modeling, precise internal volume calculations (1L), and Digital Signal Processing (DSP) to deliver high-fidelity audio through dual drivers and a tweeter.',
         'other': 'Project description not available.',
       },
     );
