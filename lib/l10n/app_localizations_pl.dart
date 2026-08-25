@@ -42,19 +42,22 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String project_description(String projects) {
-    String _temp0 = intl.Intl.selectLogic(projects, {
-      'gorilla':
-          'Kompleksowa aplikacja fitness stworzona samodzielnie przy użyciu technologii Flutter. Zawiera skalowalną architekturę wielojęzyczną, niestandardowe animacje UI/UX oraz solidne lokalne bazy danych dla profesjonalnych planów treningowych. Dostępna w Google Play z ponad 1000 pobrań.',
-      'adam':
-          'Zaawansowany, autorski robot humanoidalny demonstrujący koncepcję Embodied AI. Zaprojektowałem niskolatencyjną architekturę edge-computing w C++/Python, aby zsynchronizować chmurowe modele LLM (Gemini/Ollama) i lokalną pamięć RAG z ponad 20 serwomotorami poprzez sieć UDP.',
-      'johnny':
-          'Robot humanoidalny napędzany sztuczną inteligencją, zbudowany na platformie INMOOV. Stworzyłem potok komunikacyjny UART (Python-Arduino), aby płynnie synchronizować konwersacyjne odpowiedzi Google Vertex AI oraz syntezę mowy z fizycznymi gestami w czasie rzeczywistym.',
-      'pencil':
-          'Wieloplatformowa gra platformowa 2D stworzona w silniku Godot, przygotowywana do komercyjnego wydania. Stworzona w 100% samodzielnie, zawiera autorski pixel art, niestandardową fizykę kinematyczną oraz zoptymalizowane zarządzanie stanem.',
-      'speaker':
-          'Zaprojektowałem i zbudowałem od podstaw autorski głośnik Bluetooth. Połączyłem modelowanie 3D CAD, precyzyjne obliczenia pojemności wewnętrznej (1L) oraz cyfrowe przetwarzanie sygnału (DSP), aby zapewnić dźwięk wysokiej jakości (high-fidelity) przy użyciu dwóch przetworników i głośnika wysokotonowego.',
-      'other': 'Opis projektu niedostępny.',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      projects,
+      {
+        'gorilla':
+            'Kompleksowa aplikacja fitness stworzona samodzielnie przy użyciu technologii Flutter. Zawiera skalowalną architekturę wielojęzyczną, niestandardowe animacje UI/UX oraz solidne lokalne bazy danych dla profesjonalnych planów treningowych. Dostępna w Google Play z ponad 1000 pobrań.',
+        'adam':
+            'Zaawansowany, autorski robot humanoidalny demonstrujący koncepcję Embodied AI. Zaprojektowałem niskolatencyjną architekturę edge-computing w C++/Python, aby zsynchronizować chmurowe modele LLM (Gemini/Ollama) i lokalną pamięć RAG z ponad 20 serwomotorami poprzez sieć UDP.',
+        'johnny':
+            'Robot humanoidalny napędzany sztuczną inteligencją, zbudowany na platformie INMOOV. Stworzyłem potok komunikacyjny UART (Python-Arduino), aby płynnie synchronizować konwersacyjne odpowiedzi Google Vertex AI oraz syntezę mowy z fizycznymi gestami w czasie rzeczywistym.',
+        'pencil':
+            'Wieloplatformowa gra platformowa 2D stworzona w silniku Godot, przygotowywana do komercyjnego wydania. Stworzona w 100% samodzielnie, zawiera autorski pixel art, niestandardową fizykę kinematyczną oraz zoptymalizowane zarządzanie stanem.',
+        'speaker':
+            'Zaprojektowałem i zbudowałem od podstaw autorski głośnik Bluetooth. Połączyłem modelowanie 3D CAD, precyzyjne obliczenia pojemności wewnętrznej (1L) oraz cyfrowe przetwarzanie sygnału (DSP), aby zapewnić dźwięk wysokiej jakości (high-fidelity) przy użyciu dwóch przetworników i głośnika wysokotonowego.',
+        'other': 'Opis projektu niedostępny.',
+      },
+    );
     return '$_temp0';
   }
 }

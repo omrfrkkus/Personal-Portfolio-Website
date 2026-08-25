@@ -1,5 +1,11 @@
 # 🌐 Personal Portfolio Website
 
+<p align="center">
+  <img src="media/website.gif" width="550" alt="Desktop Website Preview" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="media/mobile_website.gif" width="220" alt="Mobile Website Preview" />
+</p>
+
 > **Live Demo:** [www.omerfarukkus.com.tr](https://www.omerfarukkus.com.tr/)
 
 ## 📌 Project Overview
