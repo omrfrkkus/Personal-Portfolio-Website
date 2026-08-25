@@ -118,6 +118,12 @@ abstract class AppLocalizations {
   /// **'Sports'**
   String get sports;
 
+  /// No description provided for @championship.
+  ///
+  /// In en, this message translates to:
+  /// **'StreetLifting World Championship 2023\n2nd in Men -125kg Category'**
+  String get championship;
+
   /// No description provided for @contact.
   ///
   /// In en, this message translates to:

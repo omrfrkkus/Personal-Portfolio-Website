@@ -217,13 +217,13 @@ class _HomePageState extends State<HomePage> {
                     runSpacing: 4,
                     children: [
                       Text(
-                        '2024 Ömer Faruk Kuş. ${AppLocalizations.of(context)!.all_rights}',
+                        '${DateTime.now().year} Ömer Faruk Kuş. ${AppLocalizations.of(context)!.all_rights}',
                         textAlign: TextAlign.center,
                       ),
                       TextButton(
                           onPressed: () {
                             _launchURL(
-                                'https://github.com/omrfrkkus/omerfarukkus_flutter_website');
+                                'https://github.com/omrfrkkus/Personal-Portfolio-Website-Flutter');
                           },
                           child: const Text('Source Code'))
                     ],

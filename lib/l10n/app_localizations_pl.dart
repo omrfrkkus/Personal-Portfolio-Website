@@ -18,6 +18,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get sports => 'Sport';
 
   @override
+  String get championship =>
+      'Mistrzostwa Świata w Streetliftingu 2023\n2. miejsce w kategorii mężczyzn -125 kg';
+
+  @override
   String get contact => 'Kontakt';
 
   @override

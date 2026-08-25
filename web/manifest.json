@@ -1,11 +1,11 @@
 {
-    "name": "omerfarukkus_flutter_website",
-    "short_name": "omerfarukkus_flutter_website",
+    "name": "Ömer Faruk Kuş Portfolio",
+    "short_name": "Portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Personal portfolio of Ömer Faruk Kuş, Robotics and AI Software Engineer.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

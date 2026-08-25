@@ -18,6 +18,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get sports => 'Spor';
 
   @override
+  String get championship =>
+      'Streetlifting Dünya Şampiyonası 2023\nErkekler -125 kg Kategorisi 2.\'si';
+
+  @override
   String get contact => 'İletişim';
 
   @override

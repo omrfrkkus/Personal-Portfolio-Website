@@ -17,7 +17,7 @@ class Projects extends StatelessWidget {
     {
       'title': 'Gorilla Workout Mobile App',
       'key': 'gorilla',
-      'image': 'images/gorilla.png',
+      'image': 'images/gorilla_light.gif',
     },
     {
       'title': 'Adam the Humanoid',
@@ -89,27 +89,16 @@ class Projects extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(height: isDesktop ? 16 : 8),
-                            isDesktop
-                                ? Expanded(
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset(
-                                        project['image']!,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  )
-                                : SizedBox(
-                                    height: 220,
-                                    width: double.infinity,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset(
-                                        project['image']!,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  project['image']!,
+                                  fit:
+                                      isDesktop ? BoxFit.cover : BoxFit.contain,
+                                ),
+                              ),
+                            ),
                             const SizedBox(height: 16),
                             Text(
                               project['title']!,
@@ -210,7 +199,7 @@ class Projects extends StatelessWidget {
       default:
         return const Gorilla(
           height: 500,
-        ); // Varsayılan widget
+        );
     }
   }
 }

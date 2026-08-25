@@ -18,6 +18,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sports => 'Sports';
 
   @override
+  String get championship =>
+      'StreetLifting World Championship 2023\n2nd in Men -125kg Category';
+
+  @override
   String get contact => 'Contact';
 
   @override

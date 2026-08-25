@@ -102,9 +102,7 @@ class Sports extends StatelessWidget {
                         ],
                       ),
               ),
-              Text(
-                  'StreetLifting World Championship 2023\n2nd in Men -125kg Category'
-                      .toUpperCase(),
+              Text(AppLocalizations.of(context)!.championship.toUpperCase(),
                   style: Theme.of(context).textTheme.titleMedium,
                   textAlign: TextAlign.center),
             ],
