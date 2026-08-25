@@ -46,10 +46,8 @@ class _HomePageState extends State<HomePage> {
               actions: [
                 DropdownButton<String>(
                   value: localeService.currentLocale.languageCode,
-                  // Add these two lines to fix the UI issue:
                   underline: const SizedBox(),
                   focusColor: Colors.transparent,
-
                   onChanged: (value) {
                     localeService.changeLocale(value!);
                   },
@@ -121,6 +119,7 @@ class _HomePageState extends State<HomePage> {
             )
           : null,
       body: CustomScrollView(
+        primary: true,
         slivers: [
           SliverToBoxAdapter(
             key: aboutKey,

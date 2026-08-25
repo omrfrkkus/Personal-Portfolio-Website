@@ -41,22 +41,19 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String project_description(String projects) {
-    String _temp0 = intl.Intl.selectLogic(
-      projects,
-      {
-        'gorilla':
-            'Flutter kullanılarak tek başıma geliştirilen kapsamlı bir fitness uygulaması. Ölçeklenebilir çok dilli mimari, özel UI/UX animasyonları ve profesyonel antrenman programları için güçlü yerel veritabanları içerir. Şu anda Google Play\'de 1.000\'den fazla indirmeye sahip.',
-        'adam':
-            'Embodied AI (Somutlaştırılmış Yapay Zeka) konseptini sergileyen, sıfırdan üretilmiş gelişmiş bir insansı robot. Bulut tabanlı LLM\'leri (Gemini/Ollama) ve yerelleştirilmiş RAG belleğini UDP ağı üzerinden 20\'den fazla servo motorla senkronize etmek için düşük gecikmeli C++/Python edge-computing mimarisi tasarlandı.',
-        'johnny':
-            'INMOOV platformu üzerine inşa edilmiş, yapay zeka destekli bir insansı robot. Google Vertex AI konversasyonel yanıtlarını ve metinden sese (TTS) çıktılarını gerçek zamanlı fiziksel jestlerle sorunsuz bir şekilde senkronize etmek için Python\'dan Arduino\'ya bir UART haberleşme hattı geliştirildi.',
-        'pencil':
-            'Ticari sürüme hazırlanan, Godot Engine ile geliştirilmiş çok platformlu bir 2D platform oyunu. %100 özgün piksel sanatı, özel kinematik fizik ve optimize edilmiş durum yönetimi (state management) ile tamamen tek başıma geliştirildi.',
-        'speaker':
-            'Sıfırdan özel bir Bluetooth akustik hoparlör tasarlandı ve üretildi. Çift sürücü ve bir tweeter aracılığıyla yüksek sadakatli (Hi-Fi) ses sunmak için 3D CAD modelleme, hassas iç hacim hesaplamaları (1L) ve Dijital Sinyal İşleme (DSP) bir araya getirildi.',
-        'other': 'Proje açıklaması mevcut değil.',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(projects, {
+      'gorilla':
+          'Flutter kullanılarak tek başıma geliştirilen kapsamlı bir fitness uygulaması. Ölçeklenebilir çok dilli mimari, özel UI/UX animasyonları ve profesyonel antrenman programları için güçlü yerel veritabanları içerir. Şu anda Google Play\'de 1.000\'den fazla indirmeye sahip.',
+      'adam':
+          'Embodied AI (Somutlaştırılmış Yapay Zeka) konseptini sergileyen, sıfırdan üretilmiş gelişmiş bir insansı robot. Bulut tabanlı LLM\'leri (Gemini/Ollama) ve yerelleştirilmiş RAG belleğini UDP ağı üzerinden 20\'den fazla servo motorla senkronize etmek için düşük gecikmeli C++/Python edge-computing mimarisi tasarlandı.',
+      'johnny':
+          'INMOOV platformu üzerine inşa edilmiş, yapay zeka destekli bir insansı robot. Google Vertex AI konversasyonel yanıtlarını ve metinden sese (TTS) çıktılarını gerçek zamanlı fiziksel jestlerle sorunsuz bir şekilde senkronize etmek için Python\'dan Arduino\'ya bir UART haberleşme hattı geliştirildi.',
+      'pencil':
+          'Ticari sürüme hazırlanan, Godot Engine ile geliştirilmiş çok platformlu bir 2D platform oyunu. %100 özgün piksel sanatı, özel kinematik fizik ve optimize edilmiş durum yönetimi (state management) ile tamamen tek başıma geliştirildi.',
+      'speaker':
+          'Sıfırdan özel bir Bluetooth akustik hoparlör tasarlandı ve üretildi. Çift sürücü ve bir tweeter aracılığıyla yüksek sadakatli (Hi-Fi) ses sunmak için 3D CAD modelleme, hassas iç hacim hesaplamaları (1L) ve Dijital Sinyal İşleme (DSP) bir araya getirildi.',
+      'other': 'Proje açıklaması mevcut değil.',
+    });
     return '$_temp0';
   }
 }
