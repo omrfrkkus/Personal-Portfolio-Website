@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website
+# 🌐 Personal Flutter Portfolio Website
 
 <p align="center">
   <img src="media/website.gif" width="550" alt="Desktop Website Preview" />
