@@ -21,7 +21,7 @@ class Pencil extends StatelessWidget {
         const gridSpacing = 16.0;
         final isDesktop = constraints.maxWidth >= 600;
         final columnCount = isDesktop ? 3 : 1;
-        final childAspectRatio = isDesktop ? 1.7 : 3.5;
+        final childAspectRatio = isDesktop ? 1.7 : 1.6;
         final rowCount = (_assets.length / columnCount).ceil();
         final tileWidth = (constraints.maxWidth -
                 horizontalPadding -
@@ -54,7 +54,7 @@ class Pencil extends StatelessWidget {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Image.asset(
                   _assets[index],
-                  fit: BoxFit.contain,
+                  fit: isDesktop ? BoxFit.contain : BoxFit.cover,
                 ),
               );
             },

@@ -27,12 +27,12 @@ class Projects extends StatelessWidget {
     {
       'title': 'Johnny the Humanoid',
       'key': 'johnny',
-      'image': 'images/johnny0.png',
+      'image': 'images/johnny.gif',
     },
     {
       'title': 'Pencil 2D Platformer Game',
       'key': 'pencil',
-      'image': 'images/pencil0.png',
+      'image': 'images/pencil_cover.png',
     },
   ];
 
@@ -58,75 +58,98 @@ class Projects extends StatelessWidget {
                 indent: 32,
                 endIndent: 32,
               ),
-        GridView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          padding: const EdgeInsets.all(32),
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 700,
-          ),
-          itemCount: projects.length,
-          itemBuilder: (BuildContext context, int index) {
-            final project = projects[index];
-            return Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Card(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: InkWell(
-                  onTap: () => _showProjectDialog(context, project),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 16),
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              project['image']!,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          project['title']!,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        Column(
+        Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: isDesktop ? 1200 : 700,
+            ),
+            child: GridView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              padding: EdgeInsets.all(isDesktop ? 32 : 16),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: isDesktop ? 2 : 1,
+                crossAxisSpacing: 24,
+                mainAxisSpacing: 24,
+                childAspectRatio: isDesktop ? 1.0 : 0.75,
+              ),
+              itemCount: projects.length,
+              itemBuilder: (BuildContext context, int index) {
+                final project = projects[index];
+                return Padding(
+                  padding: EdgeInsets.all(isDesktop ? 24 : 8),
+                  child: Card(
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: InkWell(
+                      onTap: () => _showProjectDialog(context, project),
+                      child: Padding(
+                        padding: EdgeInsets.all(isDesktop ? 16 : 12),
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            SizedBox(height: isDesktop ? 16 : 8),
+                            isDesktop
+                                ? Expanded(
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        project['image']!,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  )
+                                : SizedBox(
+                                    height: 220,
+                                    width: double.infinity,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        project['image']!,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                            const SizedBox(height: 16),
                             Text(
-                              AppLocalizations.of(context)!
-                                  .project_description(project['key']!),
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              AppLocalizations.of(context)!.click_more,
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary,
-                                decoration: TextDecoration.underline,
+                              project['title']!,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
                               ),
+                              textAlign: TextAlign.center,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  AppLocalizations.of(context)!
+                                      .project_description(project['key']!),
+                                  textAlign: TextAlign.center,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  AppLocalizations.of(context)!.click_more,
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.primary,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ),
-            );
-          },
+                );
+              },
+            ),
+          ),
         )
       ],
     );

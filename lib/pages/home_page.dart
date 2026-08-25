@@ -33,7 +33,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final localeService = Provider.of<LocaleService>(context);
-    final isDesktop = MediaQuery.sizeOf(context).width >= 600;
+    final size = MediaQuery.sizeOf(context);
+    final isDesktop = size.width >= 600;
 
     return Scaffold(
       appBar: isDesktop
@@ -120,7 +121,8 @@ class _HomePageState extends State<HomePage> {
           SliverToBoxAdapter(
             key: aboutKey,
             child: SizedBox(
-              height: 800,
+              height:
+                  isDesktop ? 800 : (size.height * 0.75).clamp(540.0, 760.0),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -131,8 +133,11 @@ class _HomePageState extends State<HomePage> {
                       style: Theme.of(context).textTheme.displaySmall,
                       textAlign: TextAlign.center,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: 8,
+                      runSpacing: 8,
                       children: [
                         TextButton(
                           onPressed: () {
@@ -154,9 +159,11 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: 4,
+                      runSpacing: 4,
                       children: [
                         IconButton(
                             onPressed: () {
@@ -193,25 +200,30 @@ class _HomePageState extends State<HomePage> {
           SliverToBoxAdapter(
               key: contactKey, child: Contact(isDesktop: isDesktop)),
           SliverToBoxAdapter(
-            child: SizedBox(
-              height: 80,
-              child: Center(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      ' 2024 Ömer Faruk Kuş. ${AppLocalizations.of(context)!.all_rights}',
-                      textAlign: TextAlign.center,
-                    ),
-                    TextButton(
-                        onPressed: () {
-                          _launchURL(
-                              'https://github.com/omrfrkkus/omerfarukkus_flutter_website');
-                        },
-                        child: const Text('Source Code'))
-                  ],
+            child: SafeArea(
+              top: false,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Center(
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    spacing: 8,
+                    runSpacing: 4,
+                    children: [
+                      Text(
+                        '2024 Ömer Faruk Kuş. ${AppLocalizations.of(context)!.all_rights}',
+                        textAlign: TextAlign.center,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            _launchURL(
+                                'https://github.com/omrfrkkus/omerfarukkus_flutter_website');
+                          },
+                          child: const Text('Source Code'))
+                    ],
+                  ),
                 ),
               ),
             ),
