@@ -1,0 +1,32 @@
+{
+  "@@locale": "nl",
+  "@about": {},
+  "@projects": {},
+  "@sports": {},
+  "@championship": {},
+  "@contact": {},
+  "@hey": {},
+  "@resume": {},
+  "@click_more": {},
+  "@close": {},
+  "@all_rights": {},
+  "about": "Over mij",
+  "projects": "Projecten",
+  "sports": "Sport",
+  "championship": "2023 ISF Streetlifting Wereldkampioenschap\nZilveren Medaillewinnaar (Mannen -125kg)",
+  "contact": "Contact",
+  "hey": "HALLO, IK BEN",
+  "resume": "Bekijk CV",
+  "click_more": "Bekijk Details",
+  "close": "Sluiten",
+  "all_rights": "Alle rechten voorbehouden. Ontwikkeld met Flutter.",
+  "project_description": "{projects, select, gorilla{Een calisthenics fitnessapplicatie gebouwd met Flutter door een solo-ontwikkelaar. Toont volledige producteigendomcyclus, met een schaalbare meertalige architectuur (i18n), vloeiende aangepaste UI/UX-animaties en een robuuste lokale database. Succesvol geïmplementeerd en onderhouden op Google Play.} adam{Een op maat ontworpen mensachtige robot die Embodied AI demonstreert. Beschikt over een C++ en Python edge-computing pijplijn met lage latentie die cloud-LLM's, gelokaliseerd RAG-geheugen en sensorfusie met meer dan 20 servomotoren naadloos synchroniseert via UDP-netwerken.} johnny{Een door AI aangedreven humanoïde robot met de nadruk op cloud-to-hardware integratie. Een robuuste Python-naar-Arduino UART communicatiepijplijn ontwikkeld om conversationele reacties en TTS van Google Vertex AI nauwkeurig te synchroniseren met elektromechanische gebaren in realtime.} pencil{Een platformonafhankelijke 2D-platformgame ontwikkeld in de Godot Engine. Volledig vanaf nul ontworpen, met aangepaste pixel art, op maat gemaakte kinematische fysica en een geoptimaliseerde state machine-architectuur voor naadloze gameplay op meerdere platforms.} speaker{Geavanceerde, op maat gemaakte 3D-geprinte akoestische systemen, vanaf nul ontworpen. Combineert CAD-gemodelleerde geometrische akoestische diffusers, nauwkeurige DSP-afstemming via ACPWorkbench en geïntegreerd BMS-energiebeheer om high-fidelity audioprestaties met hoge excursie te leveren.} other{Projectbeschrijving niet beschikbaar.}}",
+  "@project_description": {
+    "description": "Project descriptions for various projects",
+    "placeholders": {
+      "projects": {
+        "type": "String"
+      }
+    }
+  }
+}

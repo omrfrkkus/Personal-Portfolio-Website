@@ -1,0 +1,62 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Ukrainian (`uk`).
+class AppLocalizationsUk extends AppLocalizations {
+  AppLocalizationsUk([String locale = 'uk']) : super(locale);
+
+  @override
+  String get about => 'Про мене';
+
+  @override
+  String get projects => 'Проєкти';
+
+  @override
+  String get sports => 'Спорт';
+
+  @override
+  String get championship =>
+      'Чемпіонат світу зі стритліфтингу ISF 2023\nСрібний призер (Чоловіки -125 кг)';
+
+  @override
+  String get contact => 'Контакти';
+
+  @override
+  String get hey => 'ПРИВІТ, Я';
+
+  @override
+  String get resume => 'Переглянути резюме';
+
+  @override
+  String get click_more => 'Переглянути деталі';
+
+  @override
+  String get close => 'Закрити';
+
+  @override
+  String get all_rights => 'Всі права захищені. Розроблено на Flutter.';
+
+  @override
+  String project_description(String projects) {
+    String _temp0 = intl.Intl.selectLogic(
+      projects,
+      {
+        'gorilla':
+            'Фітнес-додаток для калістеніки, створений одним розробником на Flutter. Демонструє повний цикл володіння продуктом, масштабовану багатомовну архітектуру (i18n), плавні власні анімації UI/UX та надійну локальну базу даних. Успішно розгорнуто та підтримується в Google Play.',
+        'adam':
+            'Спеціально розроблений гуманоїдний робот, що демонструє втілений штучний інтелект (Embodied AI). Оснащений конвеєром периферійних обчислень (edge-computing) з низькою затримкою на C++ і Python, який плавно синхронізує хмарні LLM, локальну пам\'ять RAG і злиття датчиків із понад 20 сервомоторами через мережу UDP.',
+        'johnny':
+            'Гуманоїдний робот на базі ШІ з акцентом на інтеграцію хмари з обладнанням. Розроблено надійний конвеєр зв\'язку UART від Python до Arduino для точної синхронізації розмовних відповідей Google Vertex AI і синтезу мовлення (TTS) з електромеханічними жестами в реальному часі.',
+        'pencil':
+            'Кросплатформний 2D-платформер, розроблений на рушії Godot Engine. Створений повністю з нуля: власний піксель-арт, індивідуальна кінематична фізика та оптимізована архітектура кінцевого автомата (state machine) для плавного ігрового процесу на різних платформах.',
+        'speaker':
+            'Передові акустичні системи, надруковані на 3D-принтері та спроєктовані з нуля. Поєднує в собі CAD-модельовані геометричні акустичні дифузори, точне налаштування DSP через ACPWorkbench і інтегроване управління живленням BMS для забезпечення високоточного звуку з великим ходом дифузора.',
+        'other': 'Опис проєкту недоступний.',
+      },
+    );
+    return '$_temp0';
+  }
+}

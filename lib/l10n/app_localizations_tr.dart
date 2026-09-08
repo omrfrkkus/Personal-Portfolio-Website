@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get about => 'Hakkında';
+  String get about => 'Hakkımda';
 
   @override
   String get projects => 'Projeler';
@@ -19,7 +19,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get championship =>
-      'Streetlifting Dünya Şampiyonası 2023\nErkekler -125 kg Kategorisi 2.\'si';
+      '2023 ISF Streetlifting Dünya Şampiyonası\nGümüş Madalya (Erkekler -125kg)';
 
   @override
   String get contact => 'İletişim';
@@ -28,16 +28,17 @@ class AppLocalizationsTr extends AppLocalizations {
   String get hey => 'MERHABA, BEN';
 
   @override
-  String get resume => 'Özgeçmiş';
+  String get resume => 'Özgeçmişi Görüntüle';
 
   @override
-  String get click_more => 'Daha fazla bilgi için tıklayın';
+  String get click_more => 'Detayları Gör';
 
   @override
   String get close => 'Kapat';
 
   @override
-  String get all_rights => 'Tüm hakları saklıdır. Flutter ile geliştirildi.';
+  String get all_rights =>
+      'Tüm hakları saklıdır. Flutter ile geliştirilmiştir.';
 
   @override
   String project_description(String projects) {
@@ -45,16 +46,16 @@ class AppLocalizationsTr extends AppLocalizations {
       projects,
       {
         'gorilla':
-            'Flutter kullanılarak tek başıma geliştirilen kapsamlı bir fitness uygulaması. Ölçeklenebilir çok dilli mimari, özel UI/UX animasyonları ve profesyonel antrenman programları için güçlü yerel veritabanları içerir. Şu anda Google Play\'de 1.000\'den fazla indirmeye sahip.',
+            'Flutter ile geliştirilen, tek kişi tarafından mühendisliği yapılmış bir kalistenik fitness uygulaması. Ölçeklenebilir çoklu dil mimarisi (i18n), akıcı özel UI/UX animasyonları ve sağlam bir yerel veritabanı ile tam döngü ürün sahipliğini sergiler. Google Play\'de başarıyla yayınlandı ve bakımı yapılmaktadır.',
         'adam':
-            'Embodied AI (Somutlaştırılmış Yapay Zeka) konseptini sergileyen, sıfırdan üretilmiş gelişmiş bir insansı robot. Bulut tabanlı LLM\'leri (Gemini/Ollama) ve yerelleştirilmiş RAG belleğini UDP ağı üzerinden 20\'den fazla servo motorla senkronize etmek için düşük gecikmeli C++/Python edge-computing mimarisi tasarlandı.',
+            'Somutlaştırılmış Yapay Zekayı (Embodied AI) sergileyen özel mühendislik ürünü bir insansı robot. Bulut tabanlı LLM\'leri, yerel RAG belleğini ve sensör füzyonunu UDP ağı üzerinden 20\'den fazla servo motorla sorunsuz bir şekilde senkronize eden düşük gecikmeli C++ ve Python uç bilişim (edge-computing) işlem hattına sahiptir.',
         'johnny':
-            'INMOOV platformu üzerine inşa edilmiş, yapay zeka destekli bir insansı robot. Google Vertex AI konversasyonel yanıtlarını ve metinden sese (TTS) çıktılarını gerçek zamanlı fiziksel jestlerle sorunsuz bir şekilde senkronize etmek için Python\'dan Arduino\'ya bir UART haberleşme hattı geliştirildi.',
+            'Buluttan donanıma entegrasyonu vurgulayan yapay zeka destekli bir insansı robot. Google Vertex AI sohbet yanıtlarını ve TTS\'yi gerçek zamanlı elektromekanik hareketlerle doğru bir şekilde senkronize etmek için sağlam bir Python-Arduino UART iletişim hattı geliştirildi.',
         'pencil':
-            'Ticari sürüme hazırlanan, Godot Engine ile geliştirilmiş çok platformlu bir 2D platform oyunu. %100 özgün piksel sanatı, özel kinematik fizik ve optimize edilmiş durum yönetimi (state management) ile tamamen tek başıma geliştirildi.',
+            'Godot Engine\'de geliştirilen çapraz platform 2D platform oyunu. Kesintisiz çoklu platform oynanışı için özel piksel çizimler, özel kinematik fizik ve optimize edilmiş durum makinesi (state machine) mimarisi ile tamamen sıfırdan tasarlandı.',
         'speaker':
-            'Sıfırdan özel bir Bluetooth akustik hoparlör tasarlandı ve üretildi. Çift sürücü ve bir tweeter aracılığıyla yüksek sadakatli (Hi-Fi) ses sunmak için 3D CAD modelleme, hassas iç hacim hesaplamaları (1L) ve Dijital Sinyal İşleme (DSP) bir araya getirildi.',
-        'other': 'Proje açıklaması mevcut değil.',
+            'Sıfırdan tasarlanan gelişmiş, özel 3D baskı akustik sistemler. Yüksek aslına uygun (high-fidelity) ve yüksek sapmalı ses performansı sunmak için CAD ile modellenmiş geometrik akustik difüzörleri, ACPWorkbench ile hassas DSP ayarını ve entegre BMS güç yönetimini birleştirir.',
+        'other': 'Proje açıklaması bulunmuyor.',
       },
     );
     return '$_temp0';

@@ -1,0 +1,63 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Tagalog (`tl`).
+class AppLocalizationsTl extends AppLocalizations {
+  AppLocalizationsTl([String locale = 'tl']) : super(locale);
+
+  @override
+  String get about => 'Tungkol sa Akin';
+
+  @override
+  String get projects => 'Mga Proyekto';
+
+  @override
+  String get sports => 'Palakasan';
+
+  @override
+  String get championship =>
+      '2023 ISF Streetlifting World Championship\nSilver Medalist (Men\'s -125kg)';
+
+  @override
+  String get contact => 'Kontak';
+
+  @override
+  String get hey => 'HELLO, AKO SI';
+
+  @override
+  String get resume => 'Tingnan ang Resume';
+
+  @override
+  String get click_more => 'Tingnan ang Detalye';
+
+  @override
+  String get close => 'Isara';
+
+  @override
+  String get all_rights =>
+      'Lahat ng karapatan ay nakalaan. Binuo gamit ang Flutter.';
+
+  @override
+  String project_description(String projects) {
+    String _temp0 = intl.Intl.selectLogic(
+      projects,
+      {
+        'gorilla':
+            'Isang calisthenics fitness application na binuo nang mag-isa gamit ang Flutter. Ipinapakita nito ang full-cycle product ownership, at nagtatampok ng scalable multi-language architecture (i18n), mga custom na fluid na UI/UX animation, at isang matibay na local database. Matagumpay na nai-deploy at pinapanatili sa Google Play.',
+        'adam':
+            'Isang custom-engineered humanoid robot na nagpapakita ng Embodied AI. Nagtatampok ng low-latency C++ at Python edge-computing pipeline na maayos na nagsi-synchronize sa mga cloud LLM, localized RAG memory, at sensor fusion na may higit sa 20 servo motors sa pamamagitan ng UDP networking.',
+        'johnny':
+            'Isang AI-driven humanoid robot na nakatuon sa cloud-to-hardware integration. Nakabuo ng isang matibay na Python-to-Arduino UART communication pipeline upang tumpak na i-synchronize ang mga conversational na tugon ng Google Vertex AI at TTS kasama ang mga real-time na electromechanical gestures.',
+        'pencil':
+            'Isang cross-platform 2D platformer na binuo sa Godot Engine. Ininhinyero nang buo mula sa simula, nagtatampok ng custom na pixel art, espesyal na kinematic physics, at isang optimized na state machine architecture para sa tuluy-tuloy na multi-platform gameplay.',
+        'speaker':
+            'Mga advanced na custom 3D-printed acoustic system na ininhinyero mula sa simula. Pinagsasama ang CAD-modeled geometric acoustic diffusers, tumpak na DSP tuning sa pamamagitan ng ACPWorkbench, at integrated BMS power management upang maghatid ng high-fidelity, high-excursion na audio performance.',
+        'other': 'Walang available na paglalarawan para sa proyekto.',
+      },
+    );
+    return '$_temp0';
+  }
+}

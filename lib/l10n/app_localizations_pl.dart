@@ -19,7 +19,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get championship =>
-      'Mistrzostwa Świata w Streetliftingu 2023\n2. miejsce w kategorii mężczyzn -125 kg';
+      'Mistrzostwa Świata ISF Streetlifting 2023\nSrebrny Medalista (Mężczyźni -125kg)';
 
   @override
   String get contact => 'Kontakt';
@@ -28,10 +28,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get hey => 'CZEŚĆ, JESTEM';
 
   @override
-  String get resume => 'CV';
+  String get resume => 'Zobacz CV';
 
   @override
-  String get click_more => 'Kliknij, aby dowiedzieć się więcej';
+  String get click_more => 'Zobacz Szczegóły';
 
   @override
   String get close => 'Zamknij';
@@ -46,16 +46,16 @@ class AppLocalizationsPl extends AppLocalizations {
       projects,
       {
         'gorilla':
-            'Kompleksowa aplikacja fitness stworzona samodzielnie przy użyciu technologii Flutter. Zawiera skalowalną architekturę wielojęzyczną, niestandardowe animacje UI/UX oraz solidne lokalne bazy danych dla profesjonalnych planów treningowych. Dostępna w Google Play z ponad 1000 pobrań.',
+            'Aplikacja fitness do kalisteniki stworzona we Flutterze przez jednego inżyniera. Prezentuje pełny cykl życia produktu, zawiera skalowalną architekturę wielojęzyczną (i18n), płynne, niestandardowe animacje UI/UX oraz solidną lokalną bazę danych. Z sukcesem wdrożona i utrzymywana w Google Play.',
         'adam':
-            'Zaawansowany, autorski robot humanoidalny demonstrujący koncepcję Embodied AI. Zaprojektowałem niskolatencyjną architekturę edge-computing w C++/Python, aby zsynchronizować chmurowe modele LLM (Gemini/Ollama) i lokalną pamięć RAG z ponad 20 serwomotorami poprzez sieć UDP.',
+            'Zaprojektowany na zamówienie humanoidalny robot demonstrujący ucieleśnioną sztuczną inteligencję (Embodied AI). Wyposażony w niskolatencyjny potok przetwarzania brzegowego (edge-computing) w C++ i Pythonie, który płynnie synchronizuje chmurowe LLM, zlokalizowaną pamięć RAG i fuzję czujników z ponad 20 serwomotorami za pośrednictwem sieci UDP.',
         'johnny':
-            'Robot humanoidalny napędzany sztuczną inteligencją, zbudowany na platformie INMOOV. Stworzyłem potok komunikacyjny UART (Python-Arduino), aby płynnie synchronizować konwersacyjne odpowiedzi Google Vertex AI oraz syntezę mowy z fizycznymi gestami w czasie rzeczywistym.',
+            'Humanoidalny robot napędzany sztuczną inteligencją, z naciskiem na integrację chmury ze sprzętem. Opracowano solidny potok komunikacyjny UART na linii Python-Arduino w celu precyzyjnej synchronizacji konwersacyjnych odpowiedzi Google Vertex AI i TTS z elektromechanicznymi gestami w czasie rzeczywistym.',
         'pencil':
-            'Wieloplatformowa gra platformowa 2D stworzona w silniku Godot, przygotowywana do komercyjnego wydania. Stworzona w 100% samodzielnie, zawiera autorski pixel art, niestandardową fizykę kinematyczną oraz zoptymalizowane zarządzanie stanem.',
+            'Wieloplatformowa gra platformowa 2D stworzona w silniku Godot. Zaprojektowana całkowicie od podstaw, oferująca niestandardowy pixel art, dedykowaną fizykę kinematyczną oraz zoptymalizowaną architekturę maszyny stanów dla płynnej rozgrywki na wielu platformach.',
         'speaker':
-            'Zaprojektowałem i zbudowałem od podstaw autorski głośnik Bluetooth. Połączyłem modelowanie 3D CAD, precyzyjne obliczenia pojemności wewnętrznej (1L) oraz cyfrowe przetwarzanie sygnału (DSP), aby zapewnić dźwięk wysokiej jakości (high-fidelity) przy użyciu dwóch przetworników i głośnika wysokotonowego.',
-        'other': 'Opis projektu niedostępny.',
+            'Zaawansowane, niestandardowe systemy akustyczne z druku 3D zaprojektowane od zera. Łączą w sobie modelowane w CAD geometryczne dyfuzory akustyczne, precyzyjne strojenie DSP za pomocą ACPWorkbench oraz zintegrowane zarządzanie zasilaniem BMS, aby zapewnić najwyższej jakości dźwięk o wysokim wychyleniu membrany.',
+        'other': 'Opis projektu jest niedostępny.',
       },
     );
     return '$_temp0';

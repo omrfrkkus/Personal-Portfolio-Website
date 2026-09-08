@@ -1,0 +1,62 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Bengali Bangla (`bn`).
+class AppLocalizationsBn extends AppLocalizations {
+  AppLocalizationsBn([String locale = 'bn']) : super(locale);
+
+  @override
+  String get about => 'আমার সম্পর্কে';
+
+  @override
+  String get projects => 'প্রজেক্টস';
+
+  @override
+  String get sports => 'খেলাধুলা';
+
+  @override
+  String get championship =>
+      '২০২৩ আইএসএফ স্ট্রিটলিফটিং ওয়ার্ল্ড চ্যাম্পিয়নশিপ\nরৌপ্য পদক বিজয়ী (পুরুষ -১২৫ কেজি)';
+
+  @override
+  String get contact => 'যোগাযোগ';
+
+  @override
+  String get hey => 'হ্যালো, আমি';
+
+  @override
+  String get resume => 'রেজ্যুমে দেখুন';
+
+  @override
+  String get click_more => 'বিস্তারিত দেখুন';
+
+  @override
+  String get close => 'বন্ধ করুন';
+
+  @override
+  String get all_rights => 'সর্বস্বত্ব সংরক্ষিত। Flutter দিয়ে তৈরি।';
+
+  @override
+  String project_description(String projects) {
+    String _temp0 = intl.Intl.selectLogic(
+      projects,
+      {
+        'gorilla':
+            'ফ্লাটার (Flutter) দিয়ে তৈরি একটি সোলো-ইঞ্জিনিয়ার্ড ক্যালিসথেনিক্স ফিটনেস অ্যাপ্লিকেশন। এটি ফুল-সাইকেল প্রোডাক্ট ওনারশিপ প্রদর্শন করে, যেখানে একটি স্কেলেবল মাল্টি-ল্যাঙ্গুয়েজ আর্কিটেকচার (i18n), কাস্টম ফ্লুইড UI/UX অ্যানিমেশন এবং একটি শক্তিশালী লোকাল ডেটাবেস রয়েছে। Google Play তে সফলভাবে লঞ্চ এবং মেন্টেইন করা হয়েছে।',
+        'adam':
+            'এম্বডিয়েড এআই (Embodied AI) প্রদর্শনকারী একটি কাস্টম-ইঞ্জিনিয়ার্ড হিউম্যানয়েড রোবট। এতে একটি লো-ল্যাটেন্সি C++ এবং Python এজ-কম্পিউটিং পাইপলাইন রয়েছে যা ক্লাউড LLM, লোকালাইজড RAG মেমোরি এবং UDP নেটওয়ার্কিংয়ের মাধ্যমে ২০টিরও বেশি সার্ভো মোটরের সাথে সেন্সর ফিউশনকে নিখুঁতভাবে সিঙ্ক্রোনাইজ করে।',
+        'johnny':
+            'ক্লাউড-টু-হার্ডওয়্যার ইন্টিগ্রেশনের ওপর জোর দেওয়া একটি AI-চালিত হিউম্যানয়েড রোবট। রিয়েল-টাইম ইলেক্ট্রোমেকানিক্যাল জেসচারের সাথে Google Vertex AI-এর কনভারসেশনাল রেসপন্স এবং TTS সঠিকভাবে সিঙ্ক্রোনাইজ করতে একটি শক্তিশালী Python-to-Arduino UART কমিউনিকেশন পাইপলাইন তৈরি করা হয়েছে।',
+        'pencil':
+            'Godot Engine এ তৈরি একটি ক্রস-প্ল্যাটফর্ম 2D প্ল্যাটফর্মার গেম। এটি সম্পূর্ণ স্ক্র্যাচ থেকে তৈরি, যেখানে কাস্টম পিক্সেল আর্ট, বিস্পোক কাইনেমেটিক ফিজিক্স এবং একাধিক প্ল্যাটফর্মে নিরবচ্ছিন্ন গেমপ্লে নিশ্চিত করার জন্য একটি অপ্টিমাইজড স্টেট মেশিন (state machine) আর্কিটেকচার রয়েছে।',
+        'speaker':
+            'শুরু থেকে স্ক্র্যাচ পর্যন্ত ডিজাইন করা উন্নত কাস্টম 3D-প্রিন্টেড অ্যাকোস্টিক সিস্টেম। এটি হাই-ফিডেলিটি (High-Fidelity) এবং হাই-এক্সকারশন অডিও পারফরম্যান্স দেওয়ার জন্য CAD-মডেল করা জিওমেট্রিক অ্যাকোস্টিক ডিফিউজার, ACPWorkbench এর মাধ্যমে সুনির্দিষ্ট DSP টিউনিং এবং ইন্টিগ্রেটেড BMS পাওয়ার ম্যানেজমেন্টকে সংযুক্ত করে।',
+        'other': 'প্রজেক্টের বিবরণ উপলব্ধ নয়।',
+      },
+    );
+    return '$_temp0';
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "@@locale": "ko",
+  "@about": {},
+  "@projects": {},
+  "@sports": {},
+  "@championship": {},
+  "@contact": {},
+  "@hey": {},
+  "@resume": {},
+  "@click_more": {},
+  "@close": {},
+  "@all_rights": {},
+  "about": "소개",
+  "projects": "프로젝트",
+  "sports": "스포츠",
+  "championship": "2023 ISF 스트리트 리프팅 세계 선수권 대회\n은메달리스트 (남자 -125kg)",
+  "contact": "연락처",
+  "hey": "안녕하세요, 저는",
+  "resume": "이력서 보기",
+  "click_more": "상세 보기",
+  "close": "닫기",
+  "all_rights": "모든 권리 보유. Flutter로 개발됨.",
+  "project_description": "{projects, select, gorilla{Flutter로 개발된 1인 개발 맨몸운동 피트니스 애플리케이션입니다. 확장 가능한 다국어 아키텍처(i18n), 부드러운 맞춤형 UI/UX 애니메이션 및 강력한 로컬 데이터베이스를 갖추고 있으며, 전체 제품 주기의 소유권을 보여줍니다. Google Play에 성공적으로 배포 및 유지 관리되고 있습니다.} adam{체화된 인공지능(Embodied AI)을 시연하는 맞춤형 휴머노이드 로봇입니다. UDP 네트워킹을 통해 클라우드 LLM, 로컬 RAG 메모리 및 20개 이상의 서보 모터가 포함된 센서 퓨전을 원활하게 동기화하는 저지연 C++ 및 Python 엣지 컴퓨팅 파이프라인을 특징으로 합니다.} johnny{클라우드-하드웨어 통합을 강조하는 AI 구동 휴머노이드 로봇입니다. Google Vertex AI의 대화형 응답 및 TTS를 실시간 전기 기계적 제스처와 정확하게 동기화하기 위해 견고한 Python-Arduino UART 통신 파이프라인을 개발했습니다.} pencil{Godot 엔진에서 개발된 크로스 플랫폼 2D 플랫포머 게임입니다. 완벽한 멀티 플랫폼 게임 플레이를 위해 커스텀 픽셀 아트, 맞춤형 키네마틱 물리 및 최적화된 상태 머신(state machine) 아키텍처를 특징으로 하며 완전히 처음부터 설계되었습니다.} speaker{처음부터 설계된 고급 맞춤형 3D 프린팅 음향 시스템입니다. CAD로 모델링된 기하학적 음향 디퓨저, ACPWorkbench를 통한 정밀한 DSP 튜닝, 통합된 BMS 전원 관리를 결합하여 하이파이(High-Fidelity) 및 고편위 오디오 성능을 제공합니다.} other{프로젝트 설명을 사용할 수 없습니다.}}",
+  "@project_description": {
+    "description": "Project descriptions for various projects",
+    "placeholders": {
+      "projects": {
+        "type": "String"
+      }
+    }
+  }
+}

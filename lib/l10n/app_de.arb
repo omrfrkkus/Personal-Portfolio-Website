@@ -1,0 +1,32 @@
+{
+  "@@locale": "de",
+  "@about": {},
+  "@projects": {},
+  "@sports": {},
+  "@championship": {},
+  "@contact": {},
+  "@hey": {},
+  "@resume": {},
+  "@click_more": {},
+  "@close": {},
+  "@all_rights": {},
+  "about": "Über mich",
+  "projects": "Projekte",
+  "sports": "Sport",
+  "championship": "ISF Streetlifting Weltmeisterschaft 2023\nSilbermedaillengewinner (Männer -125kg)",
+  "contact": "Kontakt",
+  "hey": "HALLO, ICH BIN",
+  "resume": "Lebenslauf ansehen",
+  "click_more": "Details ansehen",
+  "close": "Schließen",
+  "all_rights": "Alle Rechte vorbehalten. Entwickelt mit Flutter.",
+  "project_description": "{projects, select, gorilla{Eine von einem einzigen Entwickler mit Flutter erstellte Calisthenics-Fitnessanwendung. Zeigt den vollständigen Produktlebenszyklus und verfügt über eine skalierbare mehrsprachige Architektur (i18n), flüssige benutzerdefinierte UI/UX-Animationen und eine robuste lokale Datenbank. Erfolgreich auf Google Play veröffentlicht und gewartet.} adam{Ein maßgeschneiderter humanoider Roboter, der Embodied AI demonstriert. Verfügt über eine latenzarme Edge-Computing-Pipeline in C++ und Python, die nahtlos Cloud-LLMs, lokalisierte RAG-Speicher und Sensorfusion mit über 20 Servomotoren über UDP-Netzwerke synchronisiert.} johnny{Ein KI-gesteuerter humanoider Roboter mit Schwerpunkt auf Cloud-to-Hardware-Integration. Entwicklung einer robusten Python-zu-Arduino-UART-Kommunikationspipeline zur präzisen Synchronisierung konversationeller Google Vertex AI-Antworten und TTS mit elektromechanischen Gesten in Echtzeit.} pencil{Ein plattformübergreifender 2D-Platformer, der in der Godot Engine entwickelt wurde. Komplett von Grund auf neu entwickelt, mit benutzerdefinierter Pixelkunst, maßgeschneiderter kinematischer Physik und einer optimierten Zustandsmaschinenarchitektur für nahtloses Multiplattform-Gameplay.} speaker{Fortschrittliche, maßgeschneiderte 3D-gedruckte Akustiksysteme, die von Grund auf neu entwickelt wurden. Kombiniert CAD-modellierte geometrische Akustikdiffusoren, präzises DSP-Tuning über ACPWorkbench und integriertes BMS-Energiemanagement, um eine Audioleistung mit hoher Klangtreue (High-Fidelity) und hoher Auslenkung zu liefern.} other{Projektbeschreibung nicht verfügbar.}}",
+  "@project_description": {
+    "description": "Project descriptions for various projects",
+    "placeholders": {
+      "projects": {
+        "type": "String"
+      }
+    }
+  }
+}

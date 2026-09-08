@@ -5,9 +5,28 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_ar.dart';
+import 'app_localizations_bn.dart';
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
+import 'app_localizations_fr.dart';
+import 'app_localizations_hi.dart';
+import 'app_localizations_id.dart';
+import 'app_localizations_it.dart';
+import 'app_localizations_ja.dart';
+import 'app_localizations_ko.dart';
+import 'app_localizations_nl.dart';
 import 'app_localizations_pl.dart';
+import 'app_localizations_pt.dart';
+import 'app_localizations_ro.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_th.dart';
+import 'app_localizations_tl.dart';
 import 'app_localizations_tr.dart';
+import 'app_localizations_uk.dart';
+import 'app_localizations_vi.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -95,9 +114,28 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
+    Locale('ar'),
+    Locale('bn'),
+    Locale('de'),
     Locale('en'),
+    Locale('es'),
+    Locale('fr'),
+    Locale('hi'),
+    Locale('id'),
+    Locale('it'),
+    Locale('ja'),
+    Locale('ko'),
+    Locale('nl'),
     Locale('pl'),
-    Locale('tr')
+    Locale('pt'),
+    Locale('ro'),
+    Locale('ru'),
+    Locale('th'),
+    Locale('tl'),
+    Locale('tr'),
+    Locale('uk'),
+    Locale('vi'),
+    Locale('zh')
   ];
 
   /// No description provided for @about.
@@ -115,13 +153,13 @@ abstract class AppLocalizations {
   /// No description provided for @sports.
   ///
   /// In en, this message translates to:
-  /// **'Sports'**
+  /// **'Athletics'**
   String get sports;
 
   /// No description provided for @championship.
   ///
   /// In en, this message translates to:
-  /// **'StreetLifting World Championship 2023\n2nd in Men -125kg Category'**
+  /// **'2023 ISF Streetlifting World Championship\nSilver Medalist (Men\'s -125kg)'**
   String get championship;
 
   /// No description provided for @contact.
@@ -133,19 +171,19 @@ abstract class AppLocalizations {
   /// No description provided for @hey.
   ///
   /// In en, this message translates to:
-  /// **'HEY, I\'M'**
+  /// **'HELLO, I\'M'**
   String get hey;
 
   /// No description provided for @resume.
   ///
   /// In en, this message translates to:
-  /// **'Resume'**
+  /// **'View Resume'**
   String get resume;
 
   /// No description provided for @click_more.
   ///
   /// In en, this message translates to:
-  /// **'Click for more'**
+  /// **'View Details'**
   String get click_more;
 
   /// No description provided for @close.
@@ -163,7 +201,7 @@ abstract class AppLocalizations {
   /// Project descriptions for various projects
   ///
   /// In en, this message translates to:
-  /// **'{projects, select, gorilla{A comprehensive fitness application solo-developed using Flutter. Features a scalable multi-language architecture, custom UI/UX animations, and robust local databases for professional training regimens. Currently live on Google Play with over 1,000 downloads.} adam{An advanced, custom-built humanoid robot demonstrating Embodied AI. Engineered a low-latency C++/Python edge-computing architecture to synchronize cloud LLMs (Gemini/Ollama) and localized RAG memory with 20+ servo motors via UDP networking.} johnny{An AI-driven humanoid robot built on the INMOOV platform. Developed a Python-to-Arduino UART pipeline to seamlessly synchronize Google Vertex AI conversational responses and text-to-speech outputs with real-time physical gestures.} pencil{A multi-platform 2D platformer built in the Godot Engine for an upcoming commercial release. Developed entirely solo, featuring 100% custom pixel art, custom kinematic physics, and optimized state management.} speaker{Engineered a custom Bluetooth acoustic speaker from scratch. Combined 3D CAD modeling, precise internal volume calculations (1L), and Digital Signal Processing (DSP) to deliver high-fidelity audio through dual drivers and a tweeter.} other{Project description not available.}}'**
+  /// **'{projects, select, gorilla{A solo-engineered calisthenics fitness application built with Flutter. Showcases full-cycle product ownership, featuring a scalable multi-language architecture (i18n), custom fluid UI/UX animations, and a robust local database. Successfully deployed and maintained on Google Play.} adam{A custom-engineered humanoid robot demonstrating Embodied AI. Features a low-latency C++ and Python edge-computing pipeline that seamlessly synchronizes cloud LLMs, localized RAG memory, and sensor fusion with over 20 servo motors via UDP networking.} johnny{An AI-driven humanoid robot emphasizing cloud-to-hardware integration. Developed a robust Python-to-Arduino UART communication pipeline to accurately synchronize Google Vertex AI conversational responses and TTS with real-time electromechanical gestures.} pencil{A cross-platform 2D platformer developed in the Godot Engine. Engineered entirely from scratch, featuring custom pixel art, bespoke kinematic physics, and an optimized state machine architecture for seamless multi-platform gameplay.} speaker{Advanced custom 3D-printed acoustic systems engineered from scratch. Combines CAD-modeled geometric acoustic diffusers, precise DSP tuning via ACPWorkbench, and integrated BMS power management to deliver high-fidelity, high-excursion audio performance.} other{Project description not available.}}'**
   String project_description(String projects);
 }
 
@@ -177,8 +215,30 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'pl', 'tr'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'ar',
+        'bn',
+        'de',
+        'en',
+        'es',
+        'fr',
+        'hi',
+        'id',
+        'it',
+        'ja',
+        'ko',
+        'nl',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'th',
+        'tl',
+        'tr',
+        'uk',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -187,12 +247,50 @@ class _AppLocalizationsDelegate
 AppLocalizations lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'ar':
+      return AppLocalizationsAr();
+    case 'bn':
+      return AppLocalizationsBn();
+    case 'de':
+      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'id':
+      return AppLocalizationsId();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'ja':
+      return AppLocalizationsJa();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'nl':
+      return AppLocalizationsNl();
     case 'pl':
       return AppLocalizationsPl();
+    case 'pt':
+      return AppLocalizationsPt();
+    case 'ro':
+      return AppLocalizationsRo();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'th':
+      return AppLocalizationsTh();
+    case 'tl':
+      return AppLocalizationsTl();
     case 'tr':
       return AppLocalizationsTr();
+    case 'uk':
+      return AppLocalizationsUk();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

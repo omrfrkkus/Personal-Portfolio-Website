@@ -9,6 +9,31 @@ import 'package:url_launcher/url_launcher.dart';
 import '../l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
+const _languageOptions = [
+  (code: 'ar', countryCode: 'SA', name: 'العربية'),
+  (code: 'bn', countryCode: 'BD', name: 'বাংলা'),
+  (code: 'de', countryCode: 'DE', name: 'Deutsch'),
+  (code: 'en', countryCode: 'GB', name: 'English'),
+  (code: 'es', countryCode: 'ES', name: 'Español'),
+  (code: 'fr', countryCode: 'FR', name: 'Français'),
+  (code: 'hi', countryCode: 'IN', name: 'हिन्दी'),
+  (code: 'id', countryCode: 'ID', name: 'Bahasa Indonesia'),
+  (code: 'it', countryCode: 'IT', name: 'Italiano'),
+  (code: 'ja', countryCode: 'JP', name: '日本語'),
+  (code: 'ko', countryCode: 'KR', name: '한국어'),
+  (code: 'nl', countryCode: 'NL', name: 'Nederlands'),
+  (code: 'pl', countryCode: 'PL', name: 'Polski'),
+  (code: 'pt', countryCode: 'PT', name: 'Português'),
+  (code: 'ro', countryCode: 'RO', name: 'Română'),
+  (code: 'ru', countryCode: 'RU', name: 'Русский'),
+  (code: 'th', countryCode: 'TH', name: 'ไทย'),
+  (code: 'tl', countryCode: 'PH', name: 'Tagalog'),
+  (code: 'tr', countryCode: 'TR', name: 'Türkçe'),
+  (code: 'uk', countryCode: 'UA', name: 'Українська'),
+  (code: 'vi', countryCode: 'VN', name: 'Tiếng Việt'),
+  (code: 'zh', countryCode: 'CN', name: '中文'),
+];
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -34,7 +59,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final localeService = Provider.of<LocaleService>(context);
     final size = MediaQuery.sizeOf(context);
-    final isDesktop = size.width >= 600;
+    final isDesktop = size.width >= 1000;
 
     return Scaffold(
       appBar: isDesktop
@@ -51,53 +76,25 @@ class _HomePageState extends State<HomePage> {
                   onChanged: (value) {
                     localeService.changeLocale(value!);
                   },
-                  items: [
-                    DropdownMenuItem(
-                      value: 'en',
-                      child: Row(
-                        children: [
-                          CountryFlag.fromCountryCode(
-                            'GB',
-                            width: 24,
-                            height: 16,
-                            shape: const RoundedRectangle(3),
+                  items: _languageOptions
+                      .map(
+                        (language) => DropdownMenuItem<String>(
+                          value: language.code,
+                          child: Row(
+                            children: [
+                              CountryFlag.fromCountryCode(
+                                language.countryCode,
+                                width: 24,
+                                height: 16,
+                                shape: const RoundedRectangle(3),
+                              ),
+                              const SizedBox(width: 6),
+                              Text(language.name),
+                            ],
                           ),
-                          const SizedBox(width: 6),
-                          const Text('English'),
-                        ],
-                      ),
-                    ),
-                    DropdownMenuItem(
-                      value: 'tr',
-                      child: Row(
-                        children: [
-                          CountryFlag.fromCountryCode(
-                            'TR',
-                            width: 24,
-                            height: 16,
-                            shape: const RoundedRectangle(3),
-                          ),
-                          const SizedBox(width: 6),
-                          const Text('Türkçe'),
-                        ],
-                      ),
-                    ),
-                    DropdownMenuItem(
-                      value: 'pl',
-                      child: Row(
-                        children: [
-                          CountryFlag.fromCountryCode(
-                            'PL',
-                            width: 24,
-                            height: 16,
-                            shape: const RoundedRectangle(3),
-                          ),
-                          const SizedBox(width: 6),
-                          const Text('Polski'),
-                        ],
-                      ),
-                    ),
-                  ],
+                        ),
+                      )
+                      .toList(),
                 ),
                 TextButton(
                   onPressed: () => scrollToSection(aboutKey),

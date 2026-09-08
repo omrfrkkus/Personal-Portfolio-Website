@@ -1,0 +1,32 @@
+{
+  "@@locale": "vi",
+  "@about": {},
+  "@projects": {},
+  "@sports": {},
+  "@championship": {},
+  "@contact": {},
+  "@hey": {},
+  "@resume": {},
+  "@click_more": {},
+  "@close": {},
+  "@all_rights": {},
+  "about": "Giới thiệu",
+  "projects": "Dự án",
+  "sports": "Thể thao",
+  "championship": "Giải vô địch Streetlifting Thế giới ISF 2023\nHuy chương Bạc (Nam -125kg)",
+  "contact": "Liên hệ",
+  "hey": "XIN CHÀO, TÔI LÀ",
+  "resume": "Xem Hồ sơ",
+  "click_more": "Xem Chi tiết",
+  "close": "Đóng",
+  "all_rights": "Mọi quyền được bảo lưu. Phát triển bằng Flutter.",
+  "project_description": "{projects, select, gorilla{Một ứng dụng thể dục calisthenics được phát triển độc lập bằng Flutter. Thể hiện quyền sở hữu toàn bộ vòng đời sản phẩm, có kiến trúc đa ngôn ngữ có thể mở rộng (i18n), hiệu ứng UI/UX mượt mà tùy chỉnh và cơ sở dữ liệu cục bộ mạnh mẽ. Đã triển khai và duy trì thành công trên Google Play.} adam{Một robot hình người được thiết kế tùy chỉnh chứng minh AI hiện thân (Embodied AI). Tích hợp một luồng xử lý edge-computing độ trễ thấp bằng C++ và Python, đồng bộ hóa trơn tru các mô hình LLM trên nền tảng đám mây, bộ nhớ RAG cục bộ và phản hồi cảm biến với hơn 20 động cơ servo thông qua mạng UDP.} johnny{Một robot hình người vận hành bằng AI chú trọng vào việc tích hợp từ đám mây đến phần cứng. Đã phát triển một luồng giao tiếp UART mạnh mẽ từ Python đến Arduino để đồng bộ hóa chính xác các phản hồi hội thoại của Google Vertex AI và TTS với các cử chỉ cơ điện theo thời gian thực.} pencil{Một tựa game platform 2D đa nền tảng được phát triển trên Godot Engine. Được thiết kế hoàn toàn từ con số không, có nghệ thuật pixel tùy chỉnh, vật lý động học (kinematic) được làm riêng và kiến trúc máy trạng thái (state machine) được tối ưu hóa cho trải nghiệm chơi mượt mà trên nhiều nền tảng.} speaker{Các hệ thống âm thanh in 3D tùy chỉnh tiên tiến được thiết kế từ con số không. Kết hợp các bộ khuếch tán âm thanh hình học được mô hình hóa bằng CAD, điều chỉnh DSP chính xác thông qua ACPWorkbench và quản lý năng lượng BMS tích hợp để mang lại hiệu suất âm thanh có độ trung thực cao (high-fidelity) và biên độ dao động lớn.} other{Không có mô tả dự án.}}",
+  "@project_description": {
+    "description": "Project descriptions for various projects",
+    "placeholders": {
+      "projects": {
+        "type": "String"
+      }
+    }
+  }
+}
