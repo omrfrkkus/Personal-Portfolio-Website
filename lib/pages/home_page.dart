@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
       appBar: isDesktop
           ? AppBar(
               title: InkWell(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(16),
                   onTap: () => scrollToSection(aboutKey),
                   child: const Text('Ömer Faruk Kuş')),
               actions: [

@@ -91,7 +91,7 @@ class Projects extends StatelessWidget {
                             SizedBox(height: isDesktop ? 16 : 8),
                             Expanded(
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(24),
                                 child: Image.asset(
                                   project['image']!,
                                   fit:
@@ -147,34 +147,44 @@ class Projects extends StatelessWidget {
   void _showProjectDialog(BuildContext context, Map<String, String> project) {
     showDialog<String>(
       context: context,
-      builder: (BuildContext context) => Dialog.fullscreen(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _getProjectWidget(project['title']!),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Text(
-                AppLocalizations.of(context)!.project_description(
-                    project['key']!), // Correctly call the method
-                textAlign: TextAlign.center,
+      builder: (BuildContext context) {
+        final isDesktop = MediaQuery.sizeOf(context).width >= 1000;
+        return Dialog.fullscreen(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _getProjectWidget(project['title']!),
+              const SizedBox(height: 16),
+              Center(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 820),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isDesktop ? 72 : 24,
+                    ),
+                    child: Text(
+                      AppLocalizations.of(context)!
+                          .project_description(project['key']!),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 15),
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 48),
-                child: Text(AppLocalizations.of(context)!.close),
+              const SizedBox(height: 15),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48),
+                  child: Text(AppLocalizations.of(context)!.close),
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
+            ],
+          ),
+        );
+      },
     );
   }
 
