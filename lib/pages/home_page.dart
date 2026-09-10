@@ -16,6 +16,7 @@ const _languageOptions = [
   (code: 'en', countryCode: 'GB', name: 'English'),
   (code: 'es', countryCode: 'ES', name: 'Español'),
   (code: 'fr', countryCode: 'FR', name: 'Français'),
+  (code: 'he', countryCode: 'IL', name: 'עברית'),
   (code: 'hi', countryCode: 'IN', name: 'हिन्दी'),
   (code: 'id', countryCode: 'ID', name: 'Bahasa Indonesia'),
   (code: 'it', countryCode: 'IT', name: 'Italiano'),
@@ -55,6 +56,38 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Widget _languageDropdown(LocaleService localeService) {
+    return DropdownButton<String>(
+      value: localeService.currentLocale.languageCode,
+      underline: const SizedBox(),
+      focusColor: Colors.transparent,
+      onChanged: (value) {
+        if (value != null) {
+          localeService.changeLocale(value);
+        }
+      },
+      items: _languageOptions
+          .map(
+            (language) => DropdownMenuItem<String>(
+              value: language.code,
+              child: Row(
+                children: [
+                  CountryFlag.fromCountryCode(
+                    language.countryCode,
+                    width: 24,
+                    height: 16,
+                    shape: const RoundedRectangle(3),
+                  ),
+                  const SizedBox(width: 6),
+                  Text(language.name),
+                ],
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final localeService = Provider.of<LocaleService>(context);
@@ -62,59 +95,35 @@ class _HomePageState extends State<HomePage> {
     final isDesktop = size.width >= 1000;
 
     return Scaffold(
-      appBar: isDesktop
-          ? AppBar(
-              title: InkWell(
-                  borderRadius: BorderRadius.circular(16),
-                  onTap: () => scrollToSection(aboutKey),
-                  child: const Text('Ömer Faruk Kuş')),
-              actions: [
-                DropdownButton<String>(
-                  value: localeService.currentLocale.languageCode,
-                  underline: const SizedBox(),
-                  focusColor: Colors.transparent,
-                  onChanged: (value) {
-                    localeService.changeLocale(value!);
-                  },
-                  items: _languageOptions
-                      .map(
-                        (language) => DropdownMenuItem<String>(
-                          value: language.code,
-                          child: Row(
-                            children: [
-                              CountryFlag.fromCountryCode(
-                                language.countryCode,
-                                width: 24,
-                                height: 16,
-                                shape: const RoundedRectangle(3),
-                              ),
-                              const SizedBox(width: 6),
-                              Text(language.name),
-                            ],
-                          ),
-                        ),
-                      )
-                      .toList(),
-                ),
-                TextButton(
-                  onPressed: () => scrollToSection(aboutKey),
-                  child: Text(AppLocalizations.of(context)!.about),
-                ),
-                TextButton(
-                  onPressed: () => scrollToSection(projectsKey),
-                  child: Text(AppLocalizations.of(context)!.projects),
-                ),
-                TextButton(
-                  onPressed: () => scrollToSection(sportsKey),
-                  child: Text(AppLocalizations.of(context)!.sports),
-                ),
-                TextButton(
-                  onPressed: () => scrollToSection(contactKey),
-                  child: Text(AppLocalizations.of(context)!.contact),
-                ),
-              ],
-            )
-          : null,
+      appBar: AppBar(
+        title: isDesktop
+            ? InkWell(
+                borderRadius: BorderRadius.circular(16),
+                onTap: () => scrollToSection(aboutKey),
+                child: const Text('Ömer Faruk Kuş'))
+            : null,
+        actions: [
+          _languageDropdown(localeService),
+          if (isDesktop) ...[
+            TextButton(
+              onPressed: () => scrollToSection(aboutKey),
+              child: Text(AppLocalizations.of(context)!.about),
+            ),
+            TextButton(
+              onPressed: () => scrollToSection(projectsKey),
+              child: Text(AppLocalizations.of(context)!.projects),
+            ),
+            TextButton(
+              onPressed: () => scrollToSection(sportsKey),
+              child: Text(AppLocalizations.of(context)!.sports),
+            ),
+            TextButton(
+              onPressed: () => scrollToSection(contactKey),
+              child: Text(AppLocalizations.of(context)!.contact),
+            ),
+          ],
+        ],
+      ),
       body: CustomScrollView(
         primary: true,
         slivers: [
