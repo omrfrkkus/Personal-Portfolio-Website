@@ -1,5 +1,7 @@
 {
   "@@locale": "hi",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "मैं रोबोटिक्स, कृत्रिम बुद्धिमत्ता और विचारशील डिजिटल अनुभवों पर केंद्रित सॉफ्टवेयर इंजीनियर हूँ।",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "मेरे बारे में",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "मेरे बारे में",
   "projects": "प्रोजेक्ट्स",
   "sports": "खेल",
   "championship": "2023 ISF स्ट्रीटलिफ्टिंग वर्ल्ड चैंपियनशिप\nरजत पदक विजेता (पुरुष -125 किग्रा)",

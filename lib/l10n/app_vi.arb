@@ -1,5 +1,9 @@
 {
   "@@locale": "vi",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Giới thiệu",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Tôi là kỹ sư phần mềm tập trung vào robot, trí tuệ nhân tạo và những trải nghiệm kỹ thuật số chu đáo.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

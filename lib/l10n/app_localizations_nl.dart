@@ -9,7 +9,14 @@ class AppLocalizationsNl extends AppLocalizations {
   AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Ik ben een software-engineer gericht op robotica, kunstmatige intelligentie en doordachte digitale ervaringen.';
+
+  @override
   String get about => 'Over mij';
+
+  @override
+  String get about_me => 'Over mij';
 
   @override
   String get projects => 'Projecten';

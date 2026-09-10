@@ -1,5 +1,9 @@
 {
   "@@locale": "pt",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Sobre mim",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Sou engenheiro de software focado em robótica, inteligência artificial e experiências digitais cuidadosas.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

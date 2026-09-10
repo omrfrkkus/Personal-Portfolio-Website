@@ -1,5 +1,9 @@
 {
   "@@locale": "ro",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Despre mine",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Sunt inginer software specializat în robotică, inteligență artificială și experiențe digitale bine gândite.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

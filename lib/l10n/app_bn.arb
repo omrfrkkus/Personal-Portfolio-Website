@@ -1,5 +1,7 @@
 {
   "@@locale": "bn",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "আমি রোবোটিক্স, কৃত্রিম বুদ্ধিমত্তা এবং চিন্তাশীল ডিজিটাল অভিজ্ঞতা নিয়ে কাজ করা একজন সফটওয়্যার ইঞ্জিনিয়ার।",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "আমার সম্পর্কে",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "আমার সম্পর্কে",
   "projects": "প্রজেক্টস",
   "sports": "খেলাধুলা",
   "championship": "২০২৩ আইএসএফ স্ট্রিটলিফটিং ওয়ার্ল্ড চ্যাম্পিয়নশিপ\nরৌপ্য পদক বিজয়ী (পুরুষ -১২৫ কেজি)",

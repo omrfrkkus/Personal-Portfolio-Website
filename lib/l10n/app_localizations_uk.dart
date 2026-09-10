@@ -9,7 +9,14 @@ class AppLocalizationsUk extends AppLocalizations {
   AppLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Я інженер програмного забезпечення, який спеціалізується на робототехніці, штучному інтелекті та продуманих цифрових рішеннях.';
+
+  @override
   String get about => 'Про мене';
+
+  @override
+  String get about_me => 'Про мене';
 
   @override
   String get projects => 'Проєкти';

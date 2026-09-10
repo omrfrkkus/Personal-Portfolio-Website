@@ -1,5 +1,7 @@
 {
   "@@locale": "id",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Saya adalah insinyur perangkat lunak yang berfokus pada robotika, kecerdasan buatan, dan pengalaman digital yang bermakna.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "Tentang",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Tentang Saya",
   "projects": "Proyek",
   "sports": "Olahraga",
   "championship": "Kejuaraan Dunia Streetlifting ISF 2023\nPeraih Medali Perak (Pria -125kg)",

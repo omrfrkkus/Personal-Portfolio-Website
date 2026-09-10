@@ -9,7 +9,14 @@ class AppLocalizationsTh extends AppLocalizations {
   AppLocalizationsTh([String locale = 'th']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'ผมเป็นวิศวกรซอฟต์แวร์ที่มุ่งเน้นด้านหุ่นยนต์ ปัญญาประดิษฐ์ และประสบการณ์ดิจิทัลที่ใส่ใจในรายละเอียด';
+
+  @override
   String get about => 'เกี่ยวกับ';
+
+  @override
+  String get about_me => 'เกี่ยวกับฉัน';
 
   @override
   String get projects => 'โปรเจกต์';

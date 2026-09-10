@@ -1,5 +1,9 @@
 {
   "@@locale": "tl",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Tungkol sa Akin",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Ako ay isang software engineer na nakatuon sa robotics, artificial intelligence, at maingat na digital experiences.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

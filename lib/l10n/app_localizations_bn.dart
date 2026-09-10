@@ -9,7 +9,14 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'আমি রোবোটিক্স, কৃত্রিম বুদ্ধিমত্তা এবং চিন্তাশীল ডিজিটাল অভিজ্ঞতা নিয়ে কাজ করা একজন সফটওয়্যার ইঞ্জিনিয়ার।';
+
+  @override
   String get about => 'আমার সম্পর্কে';
+
+  @override
+  String get about_me => 'আমার সম্পর্কে';
 
   @override
   String get projects => 'প্রজেক্টস';

@@ -9,7 +9,14 @@ class AppLocalizationsId extends AppLocalizations {
   AppLocalizationsId([String locale = 'id']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Saya adalah insinyur perangkat lunak yang berfokus pada robotika, kecerdasan buatan, dan pengalaman digital yang bermakna.';
+
+  @override
   String get about => 'Tentang';
+
+  @override
+  String get about_me => 'Tentang Saya';
 
   @override
   String get projects => 'Proyek';

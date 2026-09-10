@@ -203,6 +203,42 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(
+                isDesktop ? 48 : 24,
+                isDesktop ? 40 : 28,
+                isDesktop ? 48 : 24,
+                isDesktop ? 64 : 44,
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    AppLocalizations.of(context)!.about_me.toUpperCase(),
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 16),
+                  Divider(
+                    color: Theme.of(context).colorScheme.primary,
+                    thickness: 1,
+                    indent: isDesktop ? 16 : 8,
+                    endIndent: isDesktop ? 16 : 8,
+                  ),
+                  const SizedBox(height: 24),
+                  Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 900),
+                      child: Text(
+                        AppLocalizations.of(context)!.about_me_text,
+                        style: Theme.of(context).textTheme.bodyLarge,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
               key: projectsKey, child: Projects(isDesktop: isDesktop)),
           SliverToBoxAdapter(
               key: sportsKey, child: Sports(isDesktop: isDesktop)),

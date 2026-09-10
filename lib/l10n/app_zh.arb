@@ -1,5 +1,9 @@
 {
   "@@locale": "zh",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "关于我",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "我是一名专注于机器人、人工智能和用心打造数字体验的软件工程师。",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

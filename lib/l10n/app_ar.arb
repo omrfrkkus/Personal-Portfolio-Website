@@ -1,5 +1,7 @@
 {
   "@@locale": "ar",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "أنا مهندس برمجيات أركز على الروبوتات والذكاء الاصطناعي والتجارب الرقمية المدروسة.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "نبذة عني",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "نبذة عني",
   "projects": "المشاريع",
   "sports": "الرياضة",
   "championship": "بطولة العالم لرفع الأثقال في الشوارع ISF 2023\nحائز على الميدالية الفضية (رجال -125 كجم)",

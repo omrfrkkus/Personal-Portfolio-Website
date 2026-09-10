@@ -9,7 +9,13 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String get about_me_text => 'ロボティクス、人工知能、そして思慮深いデジタル体験に取り組むソフトウェアエンジニアです。';
+
+  @override
   String get about => '自己紹介';
+
+  @override
+  String get about_me => '私について';
 
   @override
   String get projects => 'プロジェクト';

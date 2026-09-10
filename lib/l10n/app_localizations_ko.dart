@@ -9,7 +9,13 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
+  String get about_me_text => '저는 로보틱스, 인공지능, 세심한 디지털 경험에 집중하는 소프트웨어 엔지니어입니다.';
+
+  @override
   String get about => '소개';
+
+  @override
+  String get about_me => '나에 대하여';
 
   @override
   String get projects => '프로젝트';

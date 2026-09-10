@@ -9,7 +9,14 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Robotik, yapay zeka ve özenli dijital deneyimlere odaklanan bir yazılım mühendisiyim.';
+
+  @override
   String get about => 'Hakkımda';
+
+  @override
+  String get about_me => 'Hakkımda';
 
   @override
   String get projects => 'Projeler';

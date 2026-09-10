@@ -1,5 +1,7 @@
 {
   "@@locale": "en",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "I am a software engineer focused on robotics, artificial intelligence, and thoughtful digital experiences.",
   "@about": {},
   "@projects": {},
   "@sports": {},
@@ -11,6 +13,8 @@
   "@close": {},
   "@all_rights": {},
   "about": "About",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "About Me",
   "projects": "Projects",
   "sports": "Athletics",
   "championship": "2023 ISF Streetlifting World Championship\nSilver Medalist (Men's -125kg)",

@@ -1,5 +1,9 @@
 {
   "@@locale": "uk",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Про мене",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Я інженер програмного забезпечення, який спеціалізується на робототехніці, штучному інтелекті та продуманих цифрових рішеннях.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

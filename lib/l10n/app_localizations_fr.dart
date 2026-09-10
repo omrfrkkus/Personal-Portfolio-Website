@@ -9,7 +9,14 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Je suis ingénieur logiciel spécialisé en robotique, intelligence artificielle et expériences numériques réfléchies.';
+
+  @override
   String get about => 'À propos';
+
+  @override
+  String get about_me => 'À propos de moi';
 
   @override
   String get projects => 'Projets';

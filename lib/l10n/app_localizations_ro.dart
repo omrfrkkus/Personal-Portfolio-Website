@@ -9,7 +9,14 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Sunt inginer software specializat în robotică, inteligență artificială și experiențe digitale bine gândite.';
+
+  @override
   String get about => 'Despre mine';
+
+  @override
+  String get about_me => 'Despre mine';
 
   @override
   String get projects => 'Proiecte';

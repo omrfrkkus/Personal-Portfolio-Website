@@ -9,7 +9,13 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get about_me_text => '我是一名专注于机器人、人工智能和用心打造数字体验的软件工程师。';
+
+  @override
   String get about => '关于我';
+
+  @override
+  String get about_me => '关于我';
 
   @override
   String get projects => '项目';

@@ -1,5 +1,7 @@
 {
   "@@locale": "ja",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "ロボティクス、人工知能、そして思慮深いデジタル体験に取り組むソフトウェアエンジニアです。",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "自己紹介",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "私について",
   "projects": "プロジェクト",
   "sports": "スポーツ",
   "championship": "2023 ISF ストリートリフティング世界選手権\n銀メダリスト (男子 -125kg級)",

@@ -140,11 +140,23 @@ abstract class AppLocalizations {
     Locale('zh')
   ];
 
+  /// Short personal introduction shown in the About Me section.
+  ///
+  /// In en, this message translates to:
+  /// **'I am a software engineer focused on robotics, artificial intelligence, and thoughtful digital experiences.'**
+  String get about_me_text;
+
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
   /// **'About'**
   String get about;
+
+  /// About Me section title.
+  ///
+  /// In en, this message translates to:
+  /// **'About Me'**
+  String get about_me;
 
   /// No description provided for @projects.
   ///

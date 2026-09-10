@@ -9,7 +9,14 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Tôi là kỹ sư phần mềm tập trung vào robot, trí tuệ nhân tạo và những trải nghiệm kỹ thuật số chu đáo.';
+
+  @override
   String get about => 'Giới thiệu';
+
+  @override
+  String get about_me => 'Giới thiệu';
 
   @override
   String get projects => 'Dự án';

@@ -9,7 +9,14 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'أنا مهندس برمجيات أركز على الروبوتات والذكاء الاصطناعي والتجارب الرقمية المدروسة.';
+
+  @override
   String get about => 'نبذة عني';
+
+  @override
+  String get about_me => 'نبذة عني';
 
   @override
   String get projects => 'المشاريع';

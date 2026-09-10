@@ -1,5 +1,9 @@
 {
   "@@locale": "th",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "เกี่ยวกับฉัน",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "ผมเป็นวิศวกรซอฟต์แวร์ที่มุ่งเน้นด้านหุ่นยนต์ ปัญญาประดิษฐ์ และประสบการณ์ดิจิทัลที่ใส่ใจในรายละเอียด",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},

@@ -1,5 +1,7 @@
 {
   "@@locale": "de",
+  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
+  "about_me_text": "Ich bin Softwareentwickler mit Schwerpunkt auf Robotik, künstlicher Intelligenz und durchdachten digitalen Erlebnissen.",
   "@about": {"description": "About section navigation label."},
   "@projects": {"description": "Projects section navigation label."},
   "@sports": {"description": "Sports section navigation label."},
@@ -11,6 +13,8 @@
   "@close": {"description": "Close action label."},
   "@all_rights": {"description": "Footer copyright text."},
   "about": "Über mich",
+  "@about_me": {"description": "About Me section title."},
+  "about_me": "Über mich",
   "projects": "Projekte",
   "sports": "Sport",
   "championship": "ISF Streetlifting Weltmeisterschaft 2023\nSilbermedaillengewinner (Männer -125kg)",

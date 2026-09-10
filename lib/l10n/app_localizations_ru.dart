@@ -9,7 +9,14 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'Я инженер-программист, специализирующийся на робототехнике, искусственном интеллекте и продуманных цифровых решениях.';
+
+  @override
   String get about => 'Обо мне';
+
+  @override
+  String get about_me => 'Обо мне';
 
   @override
   String get projects => 'Проекты';

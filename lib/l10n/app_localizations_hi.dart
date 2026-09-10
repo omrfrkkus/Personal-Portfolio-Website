@@ -9,7 +9,14 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
+  String get about_me_text =>
+      'मैं रोबोटिक्स, कृत्रिम बुद्धिमत्ता और विचारशील डिजिटल अनुभवों पर केंद्रित सॉफ्टवेयर इंजीनियर हूँ।';
+
+  @override
   String get about => 'मेरे बारे में';
+
+  @override
+  String get about_me => 'मेरे बारे में';
 
   @override
   String get projects => 'प्रोजेक्ट्स';
