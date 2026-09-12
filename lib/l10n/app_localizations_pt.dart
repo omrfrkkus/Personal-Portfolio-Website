@@ -10,7 +10,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Sou engenheiro de software focado em robótica, inteligência artificial e experiências digitais cuidadosas.';
+      'Sou um engenheiro de software versátil, apaixonado por construir produtos robustos de ponta a ponta (end-to-end). Com uma base sólida em Inteligência Artificial e desenvolvimento multiplataforma, adapto-me rapidamente a novas tecnologias para resolver problemas complexos. Desde a implementação de aplicativos móveis escaláveis e jogos 2D interativos até a engenharia de robótica impulsionada por IA e hardware embarcado, utilizo um stack tecnológico diversificado (Python, C++, Flutter, Godot) para transformar conceitos ambiciosos em realidades funcionais.';
 
   @override
   String get about => 'Sobre mim';

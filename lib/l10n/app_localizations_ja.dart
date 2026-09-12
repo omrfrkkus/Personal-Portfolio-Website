@@ -9,7 +9,8 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get about_me_text => 'ロボティクス、人工知能、そして思慮深いデジタル体験に取り組むソフトウェアエンジニアです。';
+  String get about_me_text =>
+      '私は、堅牢なエンドツーエンドの製品を構築することに情熱を注ぐ、多才なソフトウェアエンジニアです。人工知能とクロスプラットフォーム開発の強力な基盤を持ち、複雑な問題を解決するために新しいテクノロジーに迅速に適応します。スケーラブルなモバイルアプリやインタラクティブな2Dゲームの展開から、AI主導のロボティクスや組み込みハードウェアのエンジニアリングまで、多様な技術スタック（Python、C++、Flutter、Godot）を活用し、野心的なコンセプトを機能的な現実に変えます。';
 
   @override
   String get about => '自己紹介';

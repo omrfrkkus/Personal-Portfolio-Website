@@ -1,19 +1,43 @@
 {
   "@@locale": "tr",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Hakkımda",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Robotik, yapay zeka ve özenli dijital deneyimlere odaklanan bir yazılım mühendisiyim.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Sağlam ve uçtan uca ürünler geliştirmeye tutkulu, çok yönlü bir yazılım mühendisiyim. Yapay zeka ve çoklu platform geliştirme konularındaki güçlü altyapımla, karmaşık problemleri çözmek için yeni teknolojilere hızla uyum sağlarım. Ölçeklenebilir mobil uygulamalar ve etkileşimli 2D oyunlar geliştirmekten, yapay zeka destekli robotik ve gömülü donanım mühendisliğine kadar uzanan bir yelpazede, iddialı konseptleri işlevsel gerçekliklere dönüştürmek için geniş bir teknoloji yığınından (Python, C++, Flutter, Godot) yararlanıyorum.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Hakkımda",
   "projects": "Projeler",
   "sports": "Spor",

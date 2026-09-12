@@ -1,19 +1,43 @@
 {
   "@@locale": "ja",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "ロボティクス、人工知能、そして思慮深いデジタル体験に取り組むソフトウェアエンジニアです。",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "私は、堅牢なエンドツーエンドの製品を構築することに情熱を注ぐ、多才なソフトウェアエンジニアです。人工知能とクロスプラットフォーム開発の強力な基盤を持ち、複雑な問題を解決するために新しいテクノロジーに迅速に適応します。スケーラブルなモバイルアプリやインタラクティブな2Dゲームの展開から、AI主導のロボティクスや組み込みハードウェアのエンジニアリングまで、多様な技術スタック（Python、C++、Flutter、Godot）を活用し、野心的なコンセプトを機能的な現実に変えます。",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "自己紹介",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "私について",
   "projects": "プロジェクト",
   "sports": "スポーツ",

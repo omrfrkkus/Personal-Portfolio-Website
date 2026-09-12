@@ -10,7 +10,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Ich bin Softwareentwickler mit Schwerpunkt auf Robotik, künstlicher Intelligenz und durchdachten digitalen Erlebnissen.';
+      'Ich bin ein vielseitiger Softwareentwickler mit einer Leidenschaft für die Entwicklung robuster End-to-End-Produkte. Mit einem starken Fundament in künstlicher Intelligenz und plattformübergreifender Entwicklung passe ich mich schnell an neue Technologien an, um komplexe Probleme zu lösen. Von der Bereitstellung skalierbarer mobiler Anwendungen und interaktiver 2D-Spiele bis hin zur Entwicklung KI-gesteuerter Robotik und eingebetteter Hardware nutze ich einen vielfältigen Tech-Stack (Python, C++, Flutter, Godot), um ehrgeizige Konzepte in funktionale Realitäten umzusetzen.';
 
   @override
   String get about => 'Über mich';

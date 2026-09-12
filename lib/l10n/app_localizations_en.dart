@@ -10,7 +10,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'I am a software engineer focused on robotics, artificial intelligence, and thoughtful digital experiences.';
+      'I am a versatile software engineer passionate about building robust, end-to-end products. With a strong foundation in Artificial Intelligence and multi-platform development, I adapt quickly to new technologies to solve complex problems. From deploying scalable mobile applications and interactive 2D games to engineering AI-driven robotics and embedded hardware, I leverage a diverse tech stack (Python, C++, Flutter, Godot) to turn ambitious concepts into functional realities.';
 
   @override
   String get about => 'About';

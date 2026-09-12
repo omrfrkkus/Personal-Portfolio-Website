@@ -1,19 +1,43 @@
 {
   "@@locale": "id",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Saya adalah insinyur perangkat lunak yang berfokus pada robotika, kecerdasan buatan, dan pengalaman digital yang bermakna.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Saya adalah insinyur perangkat lunak serba bisa yang bersemangat membangun produk end-to-end yang tangguh. Dengan fondasi kuat dalam Kecerdasan Buatan dan pengembangan lintas platform, saya beradaptasi dengan cepat terhadap teknologi baru untuk menyelesaikan masalah kompleks. Dari penerapan aplikasi seluler yang dapat diskalakan dan game 2D interaktif hingga rekayasa robotika yang digerakkan oleh AI dan perangkat keras tertanam, saya memanfaatkan beragam tumpukan teknologi (Python, C++, Flutter, Godot) untuk mengubah konsep ambisius menjadi realitas fungsional.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Tentang",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Tentang Saya",
   "projects": "Proyek",
   "sports": "Olahraga",

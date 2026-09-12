@@ -1,19 +1,43 @@
 {
   "@@locale": "ar",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "أنا مهندس برمجيات أركز على الروبوتات والذكاء الاصطناعي والتجارب الرقمية المدروسة.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "أنا مهندس برمجيات متعدد المهارات وشغوف ببناء منتجات قوية ومتكاملة (end-to-end). بفضل أساسي المتين في الذكاء الاصطناعي والتطوير متعدد المنصات، أتكيف بسرعة مع التقنيات الجديدة لحل المشكلات المعقدة. من نشر تطبيقات الهواتف المحمولة القابلة للتوسع والألعاب ثنائية الأبعاد التفاعلية إلى هندسة الروبوتات الموجهة بالذكاء الاصطناعي والأجهزة المدمجة، أستفيد من مجموعة تقنيات متنوعة (Python، C++، Flutter، Godot) لتحويل المفاهيم الطموحة إلى حقائق وظيفية.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "نبذة عني",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "نبذة عني",
   "projects": "المشاريع",
   "sports": "الرياضة",

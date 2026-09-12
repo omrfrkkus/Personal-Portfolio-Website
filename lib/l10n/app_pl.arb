@@ -1,19 +1,43 @@
 {
   "@@locale": "pl",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "O mnie",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Jestem inżynierem oprogramowania zajmującym się robotyką, sztuczną inteligencją i przemyślanymi doświadczeniami cyfrowymi.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Jestem wszechstronnym inżynierem oprogramowania z pasją do tworzenia solidnych, kompleksowych produktów (end-to-end). Posiadając silne fundamenty w dziedzinie sztucznej inteligencji i programowania wieloplatformowego, szybko adaptuję się do nowych technologii, by rozwiązywać złożone problemy. Od wdrażania skalowalnych aplikacji mobilnych i interaktywnych gier 2D po inżynierię robotyki napędzanej przez AI oraz systemów wbudowanych – wykorzystuję różnorodny stos technologiczny (Python, C++, Flutter, Godot), aby przekształcać ambitne koncepcje w działającą rzeczywistość.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "O mnie",
   "projects": "Projekty",
   "sports": "Sport",

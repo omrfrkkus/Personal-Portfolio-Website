@@ -1,19 +1,43 @@
 {
   "@@locale": "tl",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Tungkol sa Akin",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Ako ay isang software engineer na nakatuon sa robotics, artificial intelligence, at maingat na digital experiences.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Ako ay isang versatile na software engineer na masigasig sa pagbuo ng mga matitibay at end-to-end na produkto. May matibay na pundasyon sa Artificial Intelligence at multi-platform development, mabilis akong nakakaangkop sa mga bagong teknolohiya upang malutas ang mga kumplikadong problema. Mula sa pag-deploy ng scalable na mobile applications at interactive na 2D games hanggang sa engineering ng AI-driven na robotics at embedded hardware, gumagamit ako ng iba't ibang tech stack (Python, C++, Flutter, Godot) upang gawing functional na realidad ang mga ambisyosong konsepto.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Tungkol sa Akin",
   "projects": "Mga Proyekto",
   "sports": "Palakasan",

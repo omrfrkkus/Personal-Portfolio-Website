@@ -10,7 +10,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Tôi là kỹ sư phần mềm tập trung vào robot, trí tuệ nhân tạo và những trải nghiệm kỹ thuật số chu đáo.';
+      'Tôi là một kỹ sư phần mềm đa năng đam mê xây dựng các sản phẩm toàn diện (end-to-end) và mạnh mẽ. Với nền tảng vững chắc về Trí tuệ Nhân tạo và phát triển đa nền tảng, tôi thích ứng nhanh với các công nghệ mới để giải quyết các vấn đề phức tạp. Từ việc triển khai các ứng dụng di động có thể mở rộng và trò chơi 2D tương tác đến chế tạo robot điều khiển bằng AI và phần cứng nhúng, tôi tận dụng một loạt các công nghệ đa dạng (Python, C++, Flutter, Godot) để biến những ý tưởng tham vọng thành hiện thực.';
 
   @override
   String get about => 'Giới thiệu';

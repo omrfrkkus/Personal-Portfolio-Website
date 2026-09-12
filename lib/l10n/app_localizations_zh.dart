@@ -9,7 +9,8 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get about_me_text => '我是一名专注于机器人、人工智能和用心打造数字体验的软件工程师。';
+  String get about_me_text =>
+      '我是一名全栈软件工程师，热衷于构建强大的端到端产品。凭借在人工智能和跨平台开发领域的坚实基础，我能迅速适应新技术以解决复杂问题。从部署可扩展的移动应用程序和交互式 2D 游戏，到开发人工智能驱动的机器人技术和嵌入式硬件，我利用多样化的技术栈（Python、C++、Flutter、Godot）将宏伟的构想转化为实用的现实。';
 
   @override
   String get about => '关于我';

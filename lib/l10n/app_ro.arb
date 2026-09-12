@@ -1,19 +1,43 @@
 {
   "@@locale": "ro",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Despre mine",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Sunt inginer software specializat în robotică, inteligență artificială și experiențe digitale bine gândite.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Sunt un inginer software versatil, pasionat de construirea unor produse robuste de tip end-to-end. Având o bază solidă în Inteligența Artificială și dezvoltarea multi-platformă, mă adaptez rapid la noile tehnologii pentru a rezolva probleme complexe. De la lansarea de aplicații mobile scalabile și jocuri 2D interactive, până la ingineria roboticii bazate pe IA și a hardware-ului încorporat, folosesc un stack tehnologic divers (Python, C++, Flutter, Godot) pentru a transforma concepte ambițioase în realități funcționale.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Despre mine",
   "projects": "Proiecte",
   "sports": "Sport",

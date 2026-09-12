@@ -10,7 +10,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Sunt inginer software specializat în robotică, inteligență artificială și experiențe digitale bine gândite.';
+      'Sunt un inginer software versatil, pasionat de construirea unor produse robuste de tip end-to-end. Având o bază solidă în Inteligența Artificială și dezvoltarea multi-platformă, mă adaptez rapid la noile tehnologii pentru a rezolva probleme complexe. De la lansarea de aplicații mobile scalabile și jocuri 2D interactive, până la ingineria roboticii bazate pe IA și a hardware-ului încorporat, folosesc un stack tehnologic divers (Python, C++, Flutter, Godot) pentru a transforma concepte ambițioase în realități funcționale.';
 
   @override
   String get about => 'Despre mine';

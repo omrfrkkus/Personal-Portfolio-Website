@@ -1,19 +1,43 @@
 {
   "@@locale": "nl",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Over mij",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Ik ben een software-engineer gericht op robotica, kunstmatige intelligentie en doordachte digitale ervaringen.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Ik ben een veelzijdige software-ingenieur met een passie voor het bouwen van robuuste, end-to-end producten. Met een sterke basis in kunstmatige intelligentie en platformonafhankelijke ontwikkeling, pas ik me snel aan nieuwe technologieën aan om complexe problemen op te lossen. Van het implementeren van schaalbare mobiele applicaties en interactieve 2D-games tot het engineeren van door AI aangedreven robotica en embedded hardware, ik maak gebruik van een diverse tech-stack (Python, C++, Flutter, Godot) om ambitieuze concepten om te zetten in functionele realiteit.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Over mij",
   "projects": "Projecten",
   "sports": "Sport",

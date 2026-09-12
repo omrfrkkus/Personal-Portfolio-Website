@@ -10,7 +10,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Robotik, yapay zeka ve özenli dijital deneyimlere odaklanan bir yazılım mühendisiyim.';
+      'Sağlam ve uçtan uca ürünler geliştirmeye tutkulu, çok yönlü bir yazılım mühendisiyim. Yapay zeka ve çoklu platform geliştirme konularındaki güçlü altyapımla, karmaşık problemleri çözmek için yeni teknolojilere hızla uyum sağlarım. Ölçeklenebilir mobil uygulamalar ve etkileşimli 2D oyunlar geliştirmekten, yapay zeka destekli robotik ve gömülü donanım mühendisliğine kadar uzanan bir yelpazede, iddialı konseptleri işlevsel gerçekliklere dönüştürmek için geniş bir teknoloji yığınından (Python, C++, Flutter, Godot) yararlanıyorum.';
 
   @override
   String get about => 'Hakkımda';

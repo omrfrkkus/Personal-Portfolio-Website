@@ -1,19 +1,43 @@
 {
   "@@locale": "es",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "Soy ingeniero de software especializado en robótica, inteligencia artificial y experiencias digitales cuidadas.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "Soy un ingeniero de software versátil y apasionado por la creación de productos robustos de principio a fin (end-to-end). Con una sólida base en Inteligencia Artificial y desarrollo multiplataforma, me adapto rápidamente a nuevas tecnologías para resolver problemas complejos. Desde el despliegue de aplicaciones móviles escalables y juegos 2D interactivos, hasta la ingeniería de robótica impulsada por IA y hardware integrado, utilizo un stack tecnológico diverso (Python, C++, Flutter, Godot) para convertir conceptos ambiciosos en realidades funcionales.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "Sobre mí",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "Sobre mí",
   "projects": "Proyectos",
   "sports": "Deportes",

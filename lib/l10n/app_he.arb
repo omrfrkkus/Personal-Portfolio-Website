@@ -1,19 +1,43 @@
 {
   "@@locale": "he",
-  "@about_me_text": {"description": "Short personal introduction shown in the About Me section."},
-  "about_me_text": "אני מהנדס תוכנה המתמקד ברובוטיקה, בינה מלאכותית וחוויות דיגיטליות מוקפדות.",
-  "@about": {"description": "About section navigation label."},
-  "@projects": {"description": "Projects section navigation label."},
-  "@sports": {"description": "Sports section navigation label."},
-  "@championship": {"description": "Championship achievement text."},
-  "@contact": {"description": "Contact section navigation label."},
-  "@hey": {"description": "Introduction greeting."},
-  "@resume": {"description": "Resume link label."},
-  "@click_more": {"description": "Project details link label."},
-  "@close": {"description": "Close action label."},
-  "@all_rights": {"description": "Footer copyright text."},
+  "@about_me_text": {
+    "description": "Short personal introduction shown in the About Me section."
+  },
+  "about_me_text": "אני מהנדס תוכנה ורסטילי בעל תשוקה לבניית מוצרים חזקים מקצה לקצה (end-to-end). עם בסיס איתן בבינה מלאכותית ופיתוח מרובה פלטפורמות, אני מסתגל במהירות לטכנולוגיות חדשות כדי לפתור בעיות מורכבות. מפריסת יישומי מובייל סקיילביליים ומשחקי 2D אינטראקטיביים ועד להנדסת רובוטיקה מונעת בינה מלאכותית וחומרה משובצת, אני ממנף מגוון רחב של טכנולוגיות (Python, C++, Flutter, Godot) כדי להפוך רעיונות שאפתניים למציאות פונקציונלית.",
+  "@about": {
+    "description": "About section navigation label."
+  },
+  "@projects": {
+    "description": "Projects section navigation label."
+  },
+  "@sports": {
+    "description": "Sports section navigation label."
+  },
+  "@championship": {
+    "description": "Championship achievement text."
+  },
+  "@contact": {
+    "description": "Contact section navigation label."
+  },
+  "@hey": {
+    "description": "Introduction greeting."
+  },
+  "@resume": {
+    "description": "Resume link label."
+  },
+  "@click_more": {
+    "description": "Project details link label."
+  },
+  "@close": {
+    "description": "Close action label."
+  },
+  "@all_rights": {
+    "description": "Footer copyright text."
+  },
   "about": "אודות",
-  "@about_me": {"description": "About Me section title."},
+  "@about_me": {
+    "description": "About Me section title."
+  },
   "about_me": "אודותיי",
   "projects": "פרויקטים",
   "sports": "ספורט",

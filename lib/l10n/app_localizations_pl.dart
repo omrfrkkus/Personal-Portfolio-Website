@@ -10,7 +10,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Jestem inżynierem oprogramowania zajmującym się robotyką, sztuczną inteligencją i przemyślanymi doświadczeniami cyfrowymi.';
+      'Jestem wszechstronnym inżynierem oprogramowania z pasją do tworzenia solidnych, kompleksowych produktów (end-to-end). Posiadając silne fundamenty w dziedzinie sztucznej inteligencji i programowania wieloplatformowego, szybko adaptuję się do nowych technologii, by rozwiązywać złożone problemy. Od wdrażania skalowalnych aplikacji mobilnych i interaktywnych gier 2D po inżynierię robotyki napędzanej przez AI oraz systemów wbudowanych – wykorzystuję różnorodny stos technologiczny (Python, C++, Flutter, Godot), aby przekształcać ambitne koncepcje w działającą rzeczywistość.';
 
   @override
   String get about => 'O mnie';

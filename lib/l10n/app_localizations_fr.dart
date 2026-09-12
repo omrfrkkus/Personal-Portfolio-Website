@@ -10,7 +10,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Je suis ingénieur logiciel spécialisé en robotique, intelligence artificielle et expériences numériques réfléchies.';
+      'Je suis un ingénieur logiciel polyvalent, passionné par la création de produits robustes de bout en bout (end-to-end). Fort de solides bases en intelligence artificielle et en développement multiplateforme, je m\'adapte rapidement aux nouvelles technologies pour résoudre des problèmes complexes. Du déploiement d\'applications mobiles évolutives et de jeux 2D interactifs à l\'ingénierie de la robotique pilotée par l\'IA et du matériel embarqué, j\'exploite une pile technologique diversifiée (Python, C++, Flutter, Godot) pour transformer des concepts ambitieux en réalités fonctionnelles.';
 
   @override
   String get about => 'À propos';

@@ -9,7 +9,8 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get about_me_text => '저는 로보틱스, 인공지능, 세심한 디지털 경험에 집중하는 소프트웨어 엔지니어입니다.';
+  String get about_me_text =>
+      '저는 견고한 엔드투엔드(End-to-End) 제품을 구축하는 데 열정을 가진 다재다능한 소프트웨어 엔지니어입니다. 인공지능 및 크로스 플랫폼 개발에 대한 탄탄한 기반을 바탕으로 새로운 기술에 빠르게 적응하여 복잡한 문제를 해결합니다. 확장 가능한 모바일 애플리케이션 및 대화형 2D 게임 배포에서 AI 구동 로보틱스 및 임베디드 하드웨어 엔지니어링에 이르기까지, 다양한 기술 스택(Python, C++, Flutter, Godot)을 활용하여 야심 찬 아이디어를 기능적인 현실로 구현합니다.';
 
   @override
   String get about => '소개';

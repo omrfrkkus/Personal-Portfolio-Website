@@ -10,7 +10,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Saya adalah insinyur perangkat lunak yang berfokus pada robotika, kecerdasan buatan, dan pengalaman digital yang bermakna.';
+      'Saya adalah insinyur perangkat lunak serba bisa yang bersemangat membangun produk end-to-end yang tangguh. Dengan fondasi kuat dalam Kecerdasan Buatan dan pengembangan lintas platform, saya beradaptasi dengan cepat terhadap teknologi baru untuk menyelesaikan masalah kompleks. Dari penerapan aplikasi seluler yang dapat diskalakan dan game 2D interaktif hingga rekayasa robotika yang digerakkan oleh AI dan perangkat keras tertanam, saya memanfaatkan beragam tumpukan teknologi (Python, C++, Flutter, Godot) untuk mengubah konsep ambisius menjadi realitas fungsional.';
 
   @override
   String get about => 'Tentang';

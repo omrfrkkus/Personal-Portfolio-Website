@@ -10,7 +10,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get about_me_text =>
-      'Ik ben een software-engineer gericht op robotica, kunstmatige intelligentie en doordachte digitale ervaringen.';
+      'Ik ben een veelzijdige software-ingenieur met een passie voor het bouwen van robuuste, end-to-end producten. Met een sterke basis in kunstmatige intelligentie en platformonafhankelijke ontwikkeling, pas ik me snel aan nieuwe technologieën aan om complexe problemen op te lossen. Van het implementeren van schaalbare mobiele applicaties en interactieve 2D-games tot het engineeren van door AI aangedreven robotica en embedded hardware, ik maak gebruik van een diverse tech-stack (Python, C++, Flutter, Godot) om ambitieuze concepten om te zetten in functionele realiteit.';
 
   @override
   String get about => 'Over mij';
