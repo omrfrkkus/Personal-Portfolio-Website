@@ -149,40 +149,84 @@ class Projects extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         final isDesktop = MediaQuery.sizeOf(context).width >= 1000;
+        final isPencil = project['key'] == 'pencil';
+
         return Dialog.fullscreen(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              _getProjectWidget(project['title']!),
-              const SizedBox(height: 16),
-              Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 820),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: isDesktop ? 72 : 24,
+          child: isPencil && !isDesktop
+              ? Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            _getProjectWidget(project['title']!),
+                            const SizedBox(height: 16),
+                            Center(
+                              child: ConstrainedBox(
+                                constraints:
+                                    const BoxConstraints(maxWidth: 820),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                  ),
+                                  child: Text(
+                                    AppLocalizations.of(context)!
+                                        .project_description(project['key']!),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 15),
+                          ],
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      AppLocalizations.of(context)!
-                          .project_description(project['key']!),
-                      textAlign: TextAlign.center,
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 48),
+                        child: Text(AppLocalizations.of(context)!.close),
+                      ),
                     ),
-                  ),
+                  ],
+                )
+              : Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    _getProjectWidget(project['title']!),
+                    const SizedBox(height: 16),
+                    Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 820),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: isDesktop ? 72 : 24,
+                          ),
+                          child: Text(
+                            AppLocalizations.of(context)!
+                                .project_description(project['key']!),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 48),
+                        child: Text(AppLocalizations.of(context)!.close),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              const SizedBox(height: 15),
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 48),
-                  child: Text(AppLocalizations.of(context)!.close),
-                ),
-              ),
-            ],
-          ),
         );
       },
     );
