@@ -5,6 +5,7 @@ import 'package:omerfarukkus_flutter_website/project_pages/adam.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/gorilla.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/johnny.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/pencil.dart';
+import 'package:omerfarukkus_flutter_website/project_pages/speaker.dart';
 import 'package:omerfarukkus_flutter_website/services/launch_url_service.dart';
 
 class Projects extends StatelessWidget {
@@ -36,6 +37,13 @@ class Projects extends StatelessWidget {
       'key': 'pencil',
       'image': 'images/pencil.gif',
       'github': 'https://github.com/omrfrkkus/Pencil-2D-Platformer-Showcase',
+    },
+    {
+      'title': 'Advanced Acoustic Speaker Systems',
+      'key': 'speaker',
+      'image': 'images/excursion_demo.gif',
+      'github':
+          'https://github.com/omrfrkkus/Advanced-Acoustic-Systems-Showcase',
     },
   ];
 
@@ -143,7 +151,9 @@ class Projects extends StatelessWidget {
           child: SafeArea(
             child: LayoutBuilder(
               builder: (context, constraints) {
-                final projectHeight = project['key'] == 'pencil' && !desktop
+                final projectHeight = (project['key'] == 'pencil' ||
+                            project['key'] == 'speaker') &&
+                        !desktop
                     ? (constraints.maxHeight - 240).clamp(240.0, 700.0)
                     : mobileHeight;
                 return SingleChildScrollView(
@@ -233,6 +243,8 @@ class Projects extends StatelessWidget {
         return Johnny(height: height);
       case 'Pencil 2D Platformer Game':
         return Pencil(height: isDesktop ? 900 : mobileHeight);
+      case 'Advanced Acoustic Speaker Systems':
+        return Speaker(height: isDesktop ? 900 : mobileHeight);
       default:
         return Gorilla(height: height);
     }
