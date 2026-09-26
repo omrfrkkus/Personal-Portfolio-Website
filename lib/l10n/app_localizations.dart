@@ -206,6 +206,12 @@ abstract class AppLocalizations {
   /// **'Close'**
   String get close;
 
+  /// GitHub project link label.
+  ///
+  /// In en, this message translates to:
+  /// **'View on GitHub'**
+  String get view_on_github;
+
   /// No description provided for @all_rights.
   ///
   /// In en, this message translates to:

@@ -44,6 +44,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get close => 'Tutup';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'Hak cipta dilindungi. Dikembangkan dengan Flutter.';
 
   @override

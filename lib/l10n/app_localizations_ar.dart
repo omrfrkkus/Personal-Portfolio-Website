@@ -44,6 +44,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get close => 'إغلاق';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'جميع الحقوق محفوظة. تم التطوير باستخدام Flutter.';
 
   @override

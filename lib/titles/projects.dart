@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../l10n/app_localizations.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/adam.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/gorilla.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/johnny.dart';
 import 'package:omerfarukkus_flutter_website/project_pages/pencil.dart';
+import 'package:omerfarukkus_flutter_website/services/launch_url_service.dart';
 
 class Projects extends StatelessWidget {
-  Projects({
-    super.key,
-    required this.isDesktop,
-  });
+  Projects({super.key, required this.isDesktop});
 
   final bool isDesktop;
 
@@ -18,21 +17,25 @@ class Projects extends StatelessWidget {
       'title': 'Gorilla Workout Mobile App',
       'key': 'gorilla',
       'image': 'images/gorilla_light.gif',
+      'github': 'https://github.com/omrfrkkus/Gorilla-Workout-App-Showcase',
     },
     {
       'title': 'Adam the Humanoid',
       'key': 'adam',
       'image': 'images/adam0.jpg',
+      'github': 'https://github.com/omrfrkkus/Adam-Humanoid-Robot-Showcase',
     },
     {
       'title': 'Johnny the Humanoid',
       'key': 'johnny',
       'image': 'images/johnny.gif',
+      'github': 'https://github.com/omrfrkkus/Johnny-Humanoid-Robot-Showcase',
     },
     {
       'title': 'Pencil 2D Platformer Game',
       'key': 'pencil',
       'image': 'images/pencil.gif',
+      'github': 'https://github.com/omrfrkkus/Pencil-2D-Platformer-Showcase',
     },
   ];
 
@@ -45,24 +48,15 @@ class Projects extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: 16),
-        isDesktop
-            ? Divider(
-                color: Theme.of(context).colorScheme.primary,
-                thickness: 1,
-                indent: 64,
-                endIndent: 64,
-              )
-            : Divider(
-                color: Theme.of(context).colorScheme.primary,
-                thickness: 1,
-                indent: 32,
-                endIndent: 32,
-              ),
+        Divider(
+          color: Theme.of(context).colorScheme.primary,
+          thickness: 1,
+          indent: isDesktop ? 64 : 32,
+          endIndent: isDesktop ? 64 : 32,
+        ),
         Center(
           child: ConstrainedBox(
-            constraints: BoxConstraints(
-              maxWidth: isDesktop ? 1200 : 700,
-            ),
+            constraints: BoxConstraints(maxWidth: isDesktop ? 1200 : 700),
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -74,7 +68,7 @@ class Projects extends StatelessWidget {
                 childAspectRatio: isDesktop ? 1.0 : 0.75,
               ),
               itemCount: projects.length,
-              itemBuilder: (BuildContext context, int index) {
+              itemBuilder: (context, index) {
                 final project = projects[index];
                 return Padding(
                   padding: EdgeInsets.all(isDesktop ? 24 : 8),
@@ -100,7 +94,7 @@ class Projects extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 16),
-                            Text(
+                            SelectableText(
                               project['title']!,
                               style: const TextStyle(
                                 fontSize: 18,
@@ -108,27 +102,20 @@ class Projects extends StatelessWidget {
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  AppLocalizations.of(context)!
-                                      .project_description(project['key']!),
-                                  textAlign: TextAlign.center,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  AppLocalizations.of(context)!.click_more,
-                                  style: TextStyle(
-                                    color:
-                                        Theme.of(context).colorScheme.primary,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                              ],
+                            Text(
+                              AppLocalizations.of(context)!
+                                  .project_description(project['key']!),
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              AppLocalizations.of(context)!.click_more,
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary,
+                                decoration: TextDecoration.underline,
+                              ),
                             ),
                           ],
                         ),
@@ -139,7 +126,7 @@ class Projects extends StatelessWidget {
               },
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -147,113 +134,107 @@ class Projects extends StatelessWidget {
   void _showProjectDialog(BuildContext context, Map<String, String> project) {
     showDialog<String>(
       context: context,
-      builder: (BuildContext context) {
-        final isDesktop = MediaQuery.sizeOf(context).width >= 1000;
-        final isPencil = project['key'] == 'pencil';
+      builder: (dialogContext) {
+        final screenSize = MediaQuery.sizeOf(dialogContext);
+        final desktop = screenSize.width >= 1000;
+        final mobileHeight = (screenSize.height * 0.42).clamp(240.0, 440.0);
 
         return Dialog.fullscreen(
-          child: isPencil && !isDesktop
-              ? Column(
-                  children: <Widget>[
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            _getProjectWidget(project['title']!),
-                            const SizedBox(height: 16),
-                            Center(
-                              child: ConstrainedBox(
-                                constraints:
-                                    const BoxConstraints(maxWidth: 820),
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 24,
-                                  ),
-                                  child: Text(
-                                    AppLocalizations.of(context)!
-                                        .project_description(project['key']!),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
+          child: SafeArea(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final projectHeight = project['key'] == 'pencil' && !desktop
+                    ? (constraints.maxHeight - 240).clamp(240.0, 700.0)
+                    : mobileHeight;
+                return SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minWidth: constraints.maxWidth,
+                      minHeight: constraints.maxHeight,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _getProjectWidget(
+                          project['title']!,
+                          isDesktop: desktop,
+                          mobileHeight: projectHeight,
+                        ),
+                        const SizedBox(height: 16),
+                        ConstrainedBox(
+                          constraints: const BoxConstraints(maxWidth: 820),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: desktop ? 72 : 24,
                             ),
-                            const SizedBox(height: 15),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 48),
-                        child: Text(AppLocalizations.of(context)!.close),
-                      ),
-                    ),
-                  ],
-                )
-              : Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    _getProjectWidget(project['title']!),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 820),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: isDesktop ? 72 : 24,
-                          ),
-                          child: Text(
-                            AppLocalizations.of(context)!
-                                .project_description(project['key']!),
-                            textAlign: TextAlign.center,
+                            child: SelectableText(
+                              AppLocalizations.of(context)!
+                                  .project_description(project['key']!),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ),
-                      ),
+                        const SizedBox(height: 15),
+                        _buildDialogActions(context, project, desktop),
+                      ],
                     ),
-                    const SizedBox(height: 15),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 48),
-                        child: Text(AppLocalizations.of(context)!.close),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                );
+              },
+            ),
+          ),
         );
       },
     );
   }
 
-  Widget _getProjectWidget(String title) {
+  Widget _buildDialogActions(
+    BuildContext context,
+    Map<String, String> project,
+    bool desktop,
+  ) {
+    final closeButton = TextButton(
+      onPressed: () => Navigator.pop(context),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 48),
+        child: Text(AppLocalizations.of(context)!.close),
+      ),
+    );
+    final githubButton = FilledButton.icon(
+      onPressed: () => UrlLauncherService.launchURL(project['github']!),
+      icon: const FaIcon(FontAwesomeIcons.github),
+      label: Text(AppLocalizations.of(context)!.view_on_github),
+    );
+
+    return Flex(
+      direction: desktop ? Axis.horizontal : Axis.vertical,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (desktop) closeButton else githubButton,
+        SizedBox(width: desktop ? 8 : 0, height: desktop ? 0 : 4),
+        if (desktop) githubButton else closeButton,
+      ],
+    );
+  }
+
+  Widget _getProjectWidget(
+    String title, {
+    required bool isDesktop,
+    required double mobileHeight,
+  }) {
+    final height = isDesktop ? 500.0 : mobileHeight;
     switch (title) {
       case 'Gorilla Workout Mobile App':
-        return const Gorilla(
-          height: 500,
-        );
+        return Gorilla(height: height);
       case 'Adam the Humanoid':
-        return const Adam(
-          height: 500,
-        );
+        return Adam(height: height);
       case 'Johnny the Humanoid':
-        return const Johnny(
-          height: 500,
-        );
+        return Johnny(height: height);
       case 'Pencil 2D Platformer Game':
-        return const Pencil(
-          height: 900,
-        );
+        return Pencil(height: isDesktop ? 900 : mobileHeight);
       default:
-        return const Gorilla(
-          height: 500,
-        );
+        return Gorilla(height: height);
     }
   }
 }

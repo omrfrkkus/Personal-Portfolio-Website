@@ -44,6 +44,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get close => 'Închide';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'Toate drepturile rezervate. Dezvoltat cu Flutter.';
 
   @override

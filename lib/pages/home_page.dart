@@ -137,10 +137,20 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      "${AppLocalizations.of(context)!.hey} ÖMER FARUK KUŞ",
-                      style: Theme.of(context).textTheme.displaySmall,
-                      textAlign: TextAlign.center,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: 8,
+                      children: [
+                        Text(
+                          AppLocalizations.of(context)!.hey,
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                        SelectableText(
+                          'ÖMER FARUK KUŞ',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                      ],
                     ),
                     Wrap(
                       alignment: WrapAlignment.center,
@@ -227,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                   Center(
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 900),
-                      child: Text(
+                      child: SelectableText(
                         AppLocalizations.of(context)!.about_me_text,
                         style: Theme.of(context).textTheme.bodyLarge,
                         textAlign: TextAlign.center,

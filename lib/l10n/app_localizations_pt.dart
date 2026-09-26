@@ -44,6 +44,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get close => 'Fechar';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights =>
       'Todos os direitos reservados. Desenvolvido com Flutter.';
 

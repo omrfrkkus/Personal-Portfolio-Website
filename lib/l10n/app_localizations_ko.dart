@@ -43,6 +43,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get close => '닫기';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => '모든 권리 보유. Flutter로 개발됨.';
 
   @override

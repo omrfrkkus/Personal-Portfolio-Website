@@ -43,6 +43,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get close => '閉じる';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => '無断転載を禁じます。Flutterで開発されました。';
 
   @override

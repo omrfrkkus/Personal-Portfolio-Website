@@ -44,6 +44,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get close => 'ปิด';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'สงวนลิขสิทธิ์ พัฒนาด้วย Flutter';
 
   @override

@@ -43,6 +43,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get close => '关闭';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => '版权所有。使用 Flutter 开发。';
 
   @override

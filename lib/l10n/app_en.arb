@@ -13,6 +13,7 @@
   "@resume": {},
   "@click_more": {},
   "@close": {},
+  "@view_on_github": {"description": "GitHub project link label."},
   "@all_rights": {},
   "about": "About",
   "@about_me": {
@@ -27,6 +28,7 @@
   "resume": "View Resume",
   "click_more": "View Details",
   "close": "Close",
+  "view_on_github": "View on GitHub",
   "all_rights": "All rights reserved. Developed with Flutter.",
   "project_description": "{projects, select, gorilla{A solo-engineered calisthenics fitness application built with Flutter. Showcases full-cycle product ownership, featuring a scalable multi-language architecture (i18n), custom fluid UI/UX animations, and a robust local database. Successfully deployed and maintained on Google Play.} adam{A custom-engineered humanoid robot demonstrating Embodied AI. Features a low-latency C++ and Python edge-computing pipeline that seamlessly synchronizes cloud LLMs, localized RAG memory, and sensor fusion with over 20 servo motors via UDP networking.} johnny{An AI-driven humanoid robot emphasizing cloud-to-hardware integration. Developed a robust Python-to-Arduino UART communication pipeline to accurately synchronize Google Vertex AI conversational responses and TTS with real-time electromechanical gestures.} pencil{A cross-platform 2D platformer developed in the Godot Engine. Engineered entirely from scratch, featuring custom pixel art, bespoke kinematic physics, and an optimized state machine architecture for seamless multi-platform gameplay.} speaker{Advanced custom 3D-printed acoustic systems engineered from scratch. Combines CAD-modeled geometric acoustic diffusers, precise DSP tuning via ACPWorkbench, and integrated BMS power management to deliver high-fidelity, high-excursion audio performance.} other{Project description not available.}}",
   "@project_description": {

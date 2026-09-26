@@ -44,6 +44,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get close => 'Kapat';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights =>
       'Tüm hakları saklıdır. Flutter ile geliştirilmiştir.';
 

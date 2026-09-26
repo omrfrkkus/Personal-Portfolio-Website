@@ -44,6 +44,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get close => 'बंद करें';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'सर्वाधिकार सुरक्षित। Flutter के साथ विकसित।';
 
   @override

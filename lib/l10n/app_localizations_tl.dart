@@ -44,6 +44,9 @@ class AppLocalizationsTl extends AppLocalizations {
   String get close => 'Isara';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights =>
       'Lahat ng karapatan ay nakalaan. Binuo gamit ang Flutter.';
 

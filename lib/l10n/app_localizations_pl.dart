@@ -44,6 +44,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get close => 'Zamknij';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights =>
       'Wszelkie prawa zastrzeżone. Stworzone we Flutterze.';
 

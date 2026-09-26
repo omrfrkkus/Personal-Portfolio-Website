@@ -44,6 +44,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get close => 'Закрити';
 
   @override
+  String get view_on_github => 'View on GitHub';
+
+  @override
   String get all_rights => 'Всі права захищені. Розроблено на Flutter.';
 
   @override
