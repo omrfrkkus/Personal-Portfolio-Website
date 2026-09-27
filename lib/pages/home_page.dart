@@ -181,18 +181,15 @@ class _HomePageState extends State<HomePage> {
                               onPressed: () {
                                 scrollToSection(projectsKey);
                               },
-                              child: Text(AppLocalizations.of(context)!
-                                  .projects
-                                  .toUpperCase()),
+                              child:
+                                  Text(AppLocalizations.of(context)!.projects),
                             ),
                             TextButton.icon(
                               onPressed: () {
                                 _launchURL(
                                     'https://www.omerfarukkus.com.tr/omer_faruk_kus_cv.pdf');
                               },
-                              label: Text(AppLocalizations.of(context)!
-                                  .resume
-                                  .toUpperCase()),
+                              label: Text(AppLocalizations.of(context)!.resume),
                               icon: const Icon(Icons.file_download_outlined),
                             )
                           ],
