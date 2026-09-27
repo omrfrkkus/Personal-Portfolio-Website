@@ -17,7 +17,7 @@ class Sports extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          AppLocalizations.of(context)!.sports.toUpperCase(),
+          AppLocalizations.of(context)!.sports,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: 16),
@@ -104,10 +104,15 @@ class Sports extends StatelessWidget {
                           ],
                         ),
                 ),
-                SelectableText(
-                  '${AppLocalizations.of(context)!.championship}  🥈',
-                  style: Theme.of(context).textTheme.titleMedium,
-                  textAlign: TextAlign.center,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isDesktop ? 24 : 16,
+                  ),
+                  child: SelectableText(
+                    '${AppLocalizations.of(context)!.championship}  🥈',
+                    style: Theme.of(context).textTheme.titleMedium,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 const SizedBox(height: 12),
               ],

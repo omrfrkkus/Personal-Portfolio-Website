@@ -54,7 +54,7 @@ class Projects extends StatelessWidget {
     return Column(
       children: [
         Text(
-          AppLocalizations.of(context)!.projects.toUpperCase(),
+          AppLocalizations.of(context)!.projects,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: 16),

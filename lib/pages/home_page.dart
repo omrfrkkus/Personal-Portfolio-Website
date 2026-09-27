@@ -268,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: [
                       Text(
-                        AppLocalizations.of(context)!.about_me.toUpperCase(),
+                        AppLocalizations.of(context)!.about_me,
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       const SizedBox(height: 16),

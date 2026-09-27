@@ -15,7 +15,7 @@ class Contact extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          AppLocalizations.of(context)!.contact.toUpperCase(),
+          AppLocalizations.of(context)!.contact,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: 16),
