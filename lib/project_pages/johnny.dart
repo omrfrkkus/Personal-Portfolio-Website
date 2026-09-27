@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/project_gallery.dart';
 
 class Johnny extends StatelessWidget {
   const Johnny({super.key, required this.height});
@@ -12,25 +13,21 @@ class Johnny extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return HorizontalProjectGallery(
       height: height,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-        itemCount: _assets.length,
-        itemBuilder: (_, index) {
-          return Card(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Image.asset(
-              _assets[index],
-              errorBuilder: (_, __, ___) => const SizedBox(
-                width: 260,
-                child: Center(child: Icon(Icons.broken_image_outlined)),
-              ),
+      itemCount: _assets.length,
+      itemBuilder: (_, index) {
+        return Card(
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          child: Image.asset(
+            _assets[index],
+            errorBuilder: (_, __, ___) => const SizedBox(
+              width: 260,
+              child: Center(child: Icon(Icons.broken_image_outlined)),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

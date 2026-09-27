@@ -59,34 +59,42 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _languageDropdown(LocaleService localeService) {
-    return DropdownButton<String>(
-      value: localeService.currentLocale.languageCode,
-      underline: const SizedBox(),
-      focusColor: Colors.transparent,
-      onChanged: (value) {
-        if (value != null) {
-          localeService.changeLocale(value);
-        }
-      },
-      items: _languageOptions
-          .map(
-            (language) => DropdownMenuItem<String>(
-              value: language.code,
-              child: Row(
-                children: [
-                  CountryFlag.fromCountryCode(
-                    language.countryCode,
-                    width: 24,
-                    height: 16,
-                    shape: const RoundedRectangle(3),
-                  ),
-                  const SizedBox(width: 6),
-                  Text(language.name),
-                ],
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(999)),
+      ),
+      child: DropdownButton<String>(
+        value: localeService.currentLocale.languageCode,
+        underline: const SizedBox(),
+        borderRadius: BorderRadius.circular(24),
+        focusColor: Colors.transparent,
+        onChanged: (value) {
+          if (value != null) {
+            localeService.changeLocale(value);
+          }
+        },
+        items: _languageOptions
+            .map(
+              (language) => DropdownMenuItem<String>(
+                value: language.code,
+                child: Row(
+                  children: [
+                    CountryFlag.fromCountryCode(
+                      language.countryCode,
+                      width: 24,
+                      height: 16,
+                      shape: const RoundedRectangle(3),
+                    ),
+                    const SizedBox(width: 6),
+                    Text(language.name),
+                  ],
+                ),
               ),
-            ),
-          )
-          .toList(),
+            )
+            .toList(),
+      ),
     );
   }
 
@@ -300,8 +308,10 @@ class _HomePageState extends State<HomePage> {
                 child: SafeArea(
                   top: false,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 12),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isDesktop ? 48 : 24,
+                      vertical: 12,
+                    ),
                     child: Center(
                       child: Wrap(
                         alignment: WrapAlignment.center,

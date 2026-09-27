@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../widgets/project_gallery.dart';
 
 class Gorilla extends StatelessWidget {
   const Gorilla({super.key, required this.height});
@@ -10,19 +11,15 @@ class Gorilla extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        HorizontalProjectGallery(
           height: height,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
-            itemCount: 5,
-            itemBuilder: (_, index) {
-              return Card(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: Image.asset('images/pixel$index.png'),
-              );
-            },
-          ),
+          itemCount: 5,
+          itemBuilder: (_, index) {
+            return Card(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: Image.asset('images/pixel$index.png'),
+            );
+          },
         ),
         const SizedBox(height: 10),
         InkWell(

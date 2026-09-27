@@ -50,6 +50,7 @@ class Contact extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
                         textStyle: const TextStyle(fontSize: 18),
+                        shape: const StadiumBorder(),
                       ),
                     ),
                     const SizedBox(width: 24),
@@ -64,6 +65,7 @@ class Contact extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
                         textStyle: const TextStyle(fontSize: 18),
+                        shape: const StadiumBorder(),
                       ),
                     ),
                     const SizedBox(width: 24),
@@ -78,6 +80,7 @@ class Contact extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
                         textStyle: const TextStyle(fontSize: 18),
+                        shape: const StadiumBorder(),
                       ),
                     ),
                     const SizedBox(width: 24),
@@ -92,6 +95,7 @@ class Contact extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
                         textStyle: const TextStyle(fontSize: 18),
+                        shape: const StadiumBorder(),
                       ),
                     ),
                   ],
@@ -113,6 +117,7 @@ class Contact extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 16.0, horizontal: 24.0),
                       textStyle: const TextStyle(fontSize: 18),
+                      shape: const StadiumBorder(),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -127,6 +132,7 @@ class Contact extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 16.0, horizontal: 24.0),
                       textStyle: const TextStyle(fontSize: 18),
+                      shape: const StadiumBorder(),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -141,6 +147,7 @@ class Contact extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 16.0, horizontal: 24.0),
                       textStyle: const TextStyle(fontSize: 18),
+                      shape: const StadiumBorder(),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -155,6 +162,7 @@ class Contact extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           vertical: 16.0, horizontal: 24.0),
                       textStyle: const TextStyle(fontSize: 18),
+                      shape: const StadiumBorder(),
                     ),
                   ),
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/project_gallery.dart';
 
 class Adam extends StatelessWidget {
   const Adam({super.key, required this.height});
@@ -6,19 +7,15 @@ class Adam extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return HorizontalProjectGallery(
       height: height,
-      child: ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemCount: 3,
-        itemBuilder: (_, index) {
-          return Card(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Image.asset('images/adam$index.jpg'),
-          );
-        },
-      ),
+      itemCount: 3,
+      itemBuilder: (_, index) {
+        return Card(
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          child: Image.asset('images/adam$index.jpg'),
+        );
+      },
     );
   }
 }

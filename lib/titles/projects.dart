@@ -80,6 +80,8 @@ class Projects extends StatelessWidget {
               itemCount: projects.length,
               itemBuilder: (context, index) {
                 final project = projects[index];
+                final isDynamicThumbnail =
+                    project['key'] == 'pencil' || project['key'] == 'speaker';
                 return Padding(
                   padding: EdgeInsets.all(isDesktop ? 24 : 8),
                   child: Card(
@@ -89,20 +91,46 @@ class Projects extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(isDesktop ? 16 : 12),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: isDynamicThumbnail
+                              ? MainAxisAlignment.start
+                              : MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(height: isDesktop ? 16 : 8),
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(24),
-                                child: Image.asset(
-                                  project['image']!,
-                                  fit:
-                                      isDesktop ? BoxFit.cover : BoxFit.contain,
+                            SizedBox(
+                                height: isDynamicThumbnail
+                                    ? 0
+                                    : (isDesktop ? 16 : 8)),
+                            if (isDynamicThumbnail)
+                              Expanded(
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                      maxHeight: isDesktop ? 300 : 280,
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(24),
+                                      child: Image.asset(
+                                        project['image']!,
+                                        width: double.infinity,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            else
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(24),
+                                  child: Image.asset(
+                                    project['image']!,
+                                    fit: isDesktop
+                                        ? BoxFit.cover
+                                        : BoxFit.contain,
+                                  ),
                                 ),
                               ),
-                            ),
                             const SizedBox(height: 16),
                             SelectableText(
                               project['title']!,
@@ -162,8 +190,58 @@ class Projects extends StatelessWidget {
                     final projectHeight = (project['key'] == 'pencil' ||
                                 project['key'] == 'speaker') &&
                             !desktop
-                        ? (constraints.maxHeight - 240).clamp(240.0, 700.0)
+                        ? (constraints.maxHeight - 276).clamp(180.0, 700.0)
                         : mobileHeight;
+                    final gallery = _getProjectWidget(
+                      project['title']!,
+                      isDesktop: desktop,
+                      mobileHeight: projectHeight,
+                    );
+                    final description = ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 820),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: desktop ? 72 : 24,
+                        ),
+                        child: SelectableText(
+                          AppLocalizations.of(context)!
+                              .project_description(project['key']!),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    );
+                    final actions = _buildDialogActions(
+                      context,
+                      project,
+                      desktop,
+                    );
+                    final isFixedMobileGallery = !desktop &&
+                        (project['key'] == 'pencil' ||
+                            project['key'] == 'speaker');
+
+                    if (isFixedMobileGallery) {
+                      return Column(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                gallery,
+                                const SizedBox(height: 16),
+                                description,
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 15),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 16),
+                            child: actions,
+                          ),
+                        ],
+                      );
+                    }
+
                     return SingleChildScrollView(
                       child: ConstrainedBox(
                         constraints: BoxConstraints(
@@ -174,27 +252,11 @@ class Projects extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            _getProjectWidget(
-                              project['title']!,
-                              isDesktop: desktop,
-                              mobileHeight: projectHeight,
-                            ),
+                            gallery,
                             const SizedBox(height: 16),
-                            ConstrainedBox(
-                              constraints: const BoxConstraints(maxWidth: 820),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: desktop ? 72 : 24,
-                                ),
-                                child: SelectableText(
-                                  AppLocalizations.of(context)!
-                                      .project_description(project['key']!),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            ),
+                            description,
                             const SizedBox(height: 15),
-                            _buildDialogActions(context, project, desktop),
+                            actions,
                           ],
                         ),
                       ),
