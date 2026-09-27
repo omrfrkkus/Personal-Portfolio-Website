@@ -97,6 +97,7 @@ class _HomePageState extends State<HomePage> {
     final isDesktop = size.width >= 1000;
     final contentWidth =
         isDesktop ? math.min(size.width, size.height * 4 / 3) : size.width;
+    final greeting = _sentenceCase(AppLocalizations.of(context)!.hey);
 
     return Scaffold(
       appBar: AppBar(
@@ -160,15 +161,16 @@ class _HomePageState extends State<HomePage> {
                           spacing: 8,
                           children: [
                             Text(
-                              AppLocalizations.of(context)!.hey,
+                              greeting,
                               style: Theme.of(context).textTheme.displaySmall,
                             ),
                             SelectableText(
-                              'ÖMER FARUK KUŞ',
+                              'Ömer Faruk Kuş',
                               style: Theme.of(context).textTheme.displaySmall,
                             ),
                           ],
                         ),
+                        const SizedBox(height: 16),
                         Wrap(
                           alignment: WrapAlignment.center,
                           crossAxisAlignment: WrapCrossAlignment.center,
@@ -202,23 +204,47 @@ class _HomePageState extends State<HomePage> {
                           runSpacing: 4,
                           children: [
                             IconButton(
+                                iconSize: 24,
+                                padding: const EdgeInsets.all(10),
+                                constraints: const BoxConstraints(
+                                  minWidth: 52,
+                                  minHeight: 52,
+                                ),
                                 onPressed: () {
                                   _launchURL('https://github.com/omrfrkkus');
                                 },
                                 icon: const FaIcon(FontAwesomeIcons.github)),
                             IconButton(
+                                iconSize: 24,
+                                padding: const EdgeInsets.all(10),
+                                constraints: const BoxConstraints(
+                                  minWidth: 52,
+                                  minHeight: 52,
+                                ),
                                 onPressed: () {
                                   _launchURL(
                                       'https://www.linkedin.com/in/omrfrkkus');
                                 },
                                 icon: const FaIcon(FontAwesomeIcons.linkedin)),
                             IconButton(
+                                iconSize: 24,
+                                padding: const EdgeInsets.all(10),
+                                constraints: const BoxConstraints(
+                                  minWidth: 52,
+                                  minHeight: 52,
+                                ),
                                 onPressed: () {
                                   _launchURL(
                                       'mailto:omerfaruk.kus@outlook.com');
                                 },
                                 icon: const FaIcon(FontAwesomeIcons.envelope)),
                             IconButton(
+                                iconSize: 24,
+                                padding: const EdgeInsets.all(10),
+                                constraints: const BoxConstraints(
+                                  minWidth: 52,
+                                  minHeight: 52,
+                                ),
                                 onPressed: () {
                                   _launchURL(
                                       'https://www.instagram.com/omrfrkkus');
@@ -308,6 +334,18 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+String _sentenceCase(String value) {
+  final lowercase = value.trim().toLowerCase();
+  if (lowercase.isEmpty) {
+    return lowercase;
+  }
+
+  final firstLetter = lowercase[0].toUpperCase();
+  var result = '$firstLetter${lowercase.substring(1)}';
+  result = result.replaceAll("i'm", "I'm").replaceAll('i am', 'I am');
+  return result;
 }
 
 void _launchURL(String url) async {
