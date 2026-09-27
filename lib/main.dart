@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
       create: (_) => LocaleService(),
       child: Consumer<LocaleService>(
         builder: (context, localeService, child) {
-          final textTheme =
-              createTextTheme(context, "Montserrat", "Montserrat");
+          final textTheme = createTextTheme(context);
           final theme = MaterialTheme(textTheme);
           return MaterialApp(
             title: 'Ömer Faruk Kuş',

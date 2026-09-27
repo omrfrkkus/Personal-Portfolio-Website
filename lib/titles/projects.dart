@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../l10n/app_localizations.dart';
@@ -145,53 +147,61 @@ class Projects extends StatelessWidget {
       builder: (dialogContext) {
         final screenSize = MediaQuery.sizeOf(dialogContext);
         final desktop = screenSize.width >= 1000;
+        final detailWidth = desktop
+            ? math.min(screenSize.width, screenSize.height * 4 / 3)
+            : screenSize.width;
         final mobileHeight = (screenSize.height * 0.42).clamp(240.0, 440.0);
 
         return Dialog.fullscreen(
-          child: SafeArea(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final projectHeight = (project['key'] == 'pencil' ||
-                            project['key'] == 'speaker') &&
-                        !desktop
-                    ? (constraints.maxHeight - 240).clamp(240.0, 700.0)
-                    : mobileHeight;
-                return SingleChildScrollView(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minWidth: constraints.maxWidth,
-                      minHeight: constraints.maxHeight,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        _getProjectWidget(
-                          project['title']!,
-                          isDesktop: desktop,
-                          mobileHeight: projectHeight,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: detailWidth),
+              child: SafeArea(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final projectHeight = (project['key'] == 'pencil' ||
+                                project['key'] == 'speaker') &&
+                            !desktop
+                        ? (constraints.maxHeight - 240).clamp(240.0, 700.0)
+                        : mobileHeight;
+                    return SingleChildScrollView(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minWidth: constraints.maxWidth,
+                          minHeight: constraints.maxHeight,
                         ),
-                        const SizedBox(height: 16),
-                        ConstrainedBox(
-                          constraints: const BoxConstraints(maxWidth: 820),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: desktop ? 72 : 24,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            _getProjectWidget(
+                              project['title']!,
+                              isDesktop: desktop,
+                              mobileHeight: projectHeight,
                             ),
-                            child: SelectableText(
-                              AppLocalizations.of(context)!
-                                  .project_description(project['key']!),
-                              textAlign: TextAlign.center,
+                            const SizedBox(height: 16),
+                            ConstrainedBox(
+                              constraints: const BoxConstraints(maxWidth: 820),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: desktop ? 72 : 24,
+                                ),
+                                child: SelectableText(
+                                  AppLocalizations.of(context)!
+                                      .project_description(project['key']!),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
                             ),
-                          ),
+                            const SizedBox(height: 15),
+                            _buildDialogActions(context, project, desktop),
+                          ],
                         ),
-                        const SizedBox(height: 15),
-                        _buildDialogActions(context, project, desktop),
-                      ],
-                    ),
-                  ),
-                );
-              },
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
           ),
         );

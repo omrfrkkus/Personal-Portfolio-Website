@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,7 +18,149 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ömer Faruk Kuş">
+  <meta name="robots" content="index, follow">
   <meta name="description" content="Personal portfolio and resume of Ömer Faruk Kuş, Robotics & AI Software Engineer. View my projects, skills, and contact information.">
+  <meta name="theme-color" content="#19120d">
+
+  <!-- Social preview metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ömer Faruk Kuş">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Ömer Faruk Kuş">
+  <meta property="og:description" content="Personal portfolio of Ömer Faruk Kuş, Robotics and AI Software Engineer.">
+  <meta property="og:url" content="https://www.omerfarukkus.com.tr/">
+  <meta property="og:image" content="https://www.omerfarukkus.com.tr/icons/Icon-512.png">
+  <meta property="og:image:alt" content="Ömer Faruk Kuş portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@omrfrkkus">
+  <meta name="twitter:title" content="Ömer Faruk Kuş">
+  <meta name="twitter:description" content="Personal portfolio of Ömer Faruk Kuş, Robotics and AI Software Engineer.">
+  <meta name="twitter:image" content="https://www.omerfarukkus.com.tr/icons/Icon-512.png">
+  <link rel="canonical" href="https://www.omerfarukkus.com.tr/">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.omerfarukkus.com.tr/#person",
+          "name": "Ömer Faruk Kuş",
+          "url": "https://www.omerfarukkus.com.tr/",
+          "jobTitle": "Software Engineer",
+          "description": "Robotics and AI software engineer specializing in multi-platform applications, embedded systems, and intelligent robotics.",
+          "sameAs": [
+            "https://github.com/omrfrkkus",
+            "https://www.linkedin.com/in/omrfrkkus"
+          ],
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "Robotics",
+            "Flutter",
+            "Python",
+            "C++",
+            "Embedded Systems",
+            "Godot"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.omerfarukkus.com.tr/#website",
+          "url": "https://www.omerfarukkus.com.tr/",
+          "name": "Ömer Faruk Kuş",
+          "description": "Personal portfolio of Ömer Faruk Kuş, Robotics and AI Software Engineer.",
+          "publisher": {
+            "@id": "https://www.omerfarukkus.com.tr/#person"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  </noscript>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #19120d;
+    }
+
+    .loading-screen {
+      align-items: center;
+      background: #19120d;
+      box-sizing: border-box;
+      color: #f0dfd6;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+      inset: 0;
+      justify-content: center;
+      padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+      position: fixed;
+      text-align: center;
+      transition: opacity 240ms ease, visibility 240ms ease;
+      width: 100vw;
+      z-index: 9999;
+    }
+
+    .loading-screen__progress {
+      background: rgba(255, 183, 131, 0.22);
+      border-radius: 999px;
+      height: 4px;
+      overflow: hidden;
+      position: relative;
+      width: min(220px, 60vw);
+    }
+
+    .loading-screen__progress::before {
+      animation: loading-progress 1.2s ease-in-out infinite;
+      background: #ffb783;
+      border-radius: inherit;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 42%;
+    }
+
+    .loading-screen__label {
+      color: #ffb783;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .loading-screen__progress {
+      margin-top: 18px;
+    }
+
+    .flutter-ready .loading-screen {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    @keyframes loading-progress {
+      from { transform: translateX(-110%); }
+      to { transform: translateX(250%); }
+    }
+  </style>
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,10 +171,19 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>Ömer Faruk Kuş | Software Engineer</title>
+  <title>Ömer Faruk Kuş</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <div class="loading-screen" role="status" aria-label="Loading">
+    <div class="loading-screen__label">Ömer Faruk Kuş</div>
+    <div class="loading-screen__progress" aria-hidden="true"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.body.classList.add('flutter-ready');
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
