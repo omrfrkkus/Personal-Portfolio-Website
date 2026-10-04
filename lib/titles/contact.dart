@@ -49,7 +49,10 @@ class Contact extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
-                        textStyle: const TextStyle(fontSize: 18),
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .labelLarge
+                            ?.copyWith(fontSize: 18),
                         shape: const StadiumBorder(),
                       ),
                     ),
@@ -64,7 +67,10 @@ class Contact extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
-                        textStyle: const TextStyle(fontSize: 18),
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .labelLarge
+                            ?.copyWith(fontSize: 18),
                         shape: const StadiumBorder(),
                       ),
                     ),
@@ -79,7 +85,10 @@ class Contact extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
-                        textStyle: const TextStyle(fontSize: 18),
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .labelLarge
+                            ?.copyWith(fontSize: 18),
                         shape: const StadiumBorder(),
                       ),
                     ),
@@ -94,7 +103,10 @@ class Contact extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 24.0, horizontal: 32.0),
-                        textStyle: const TextStyle(fontSize: 18),
+                        textStyle: Theme.of(context)
+                            .textTheme
+                            .labelLarge
+                            ?.copyWith(fontSize: 18),
                         shape: const StadiumBorder(),
                       ),
                     ),
@@ -117,7 +129,10 @@ class Contact extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 20),
+                      textStyle: Theme.of(context)
+                          .textTheme
+                          .labelLarge
+                          ?.copyWith(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -133,7 +148,10 @@ class Contact extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 20),
+                      textStyle: Theme.of(context)
+                          .textTheme
+                          .labelLarge
+                          ?.copyWith(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -149,7 +167,10 @@ class Contact extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 20),
+                      textStyle: Theme.of(context)
+                          .textTheme
+                          .labelLarge
+                          ?.copyWith(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -165,7 +186,10 @@ class Contact extends StatelessWidget {
                       minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 20),
+                      textStyle: Theme.of(context)
+                          .textTheme
+                          .labelLarge
+                          ?.copyWith(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),

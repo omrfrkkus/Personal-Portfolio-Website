@@ -391,7 +391,9 @@ class Projects extends StatelessWidget {
         padding: desktop
             ? null
             : const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
-        textStyle: desktop ? null : const TextStyle(fontSize: 14),
+        textStyle: desktop
+            ? null
+            : Theme.of(context).textTheme.labelLarge?.copyWith(fontSize: 14),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: desktop ? 48 : 0),
@@ -412,7 +414,10 @@ class Projects extends StatelessWidget {
           : FilledButton.styleFrom(
               minimumSize: const Size(0, 48),
               padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
-              textStyle: const TextStyle(fontSize: 14),
+              textStyle: Theme.of(context)
+                  .textTheme
+                  .labelLarge
+                  ?.copyWith(fontSize: 14),
             ),
     );
 
