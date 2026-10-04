@@ -7,7 +7,7 @@
   "@about_me_text": {
     "description": "Short personal introduction shown in the About Me section."
   },
-  "about_me_text": "Ako ay isang versatile na software engineer na masigasig sa pagbuo ng mga matitibay at end-to-end na produkto. May matibay na pundasyon sa Artificial Intelligence at multi-platform development, mabilis akong nakakaangkop sa mga bagong teknolohiya upang malutas ang mga kumplikadong problema. Mula sa pag-deploy ng scalable na mobile applications at interactive na 2D games hanggang sa engineering ng AI-driven na robotics at embedded hardware, gumagamit ako ng iba't ibang tech stack (Python, C++, Flutter, Godot) upang gawing functional na realidad ang mga ambisyosong konsepto.",
+  "about_me_text": "Ako ay isang software engineer na masigasig sa pagbuo ng mga matitibay at end-to-end na produkto. May matibay na pundasyon sa Artificial Intelligence at multi-platform development, mabilis akong nakakaangkop sa mga bagong teknolohiya upang malutas ang mga kumplikadong problema. Mula sa pag-deploy ng scalable na mobile applications at interactive na 2D games hanggang sa engineering ng AI-driven na robotics at embedded hardware, gumagamit ako ng iba't ibang tech stack (Python, C++, Flutter, Godot) upang gawing functional na realidad ang mga ambisyosong konsepto.",
   "@about": {
     "description": "About section navigation label."
   },

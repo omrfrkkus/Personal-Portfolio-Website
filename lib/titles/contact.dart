@@ -111,12 +111,13 @@ class Contact extends StatelessWidget {
                       UrlLauncherService.launchURL(
                           'mailto:omerfaruk.kus@outlook.com');
                     },
-                    icon: const Icon(Icons.email),
+                    icon: const Icon(Icons.email, size: 20),
                     label: const Text('Email'),
                     style: ElevatedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 18),
+                          vertical: 12.0, horizontal: 24.0),
+                      textStyle: const TextStyle(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -126,12 +127,13 @@ class Contact extends StatelessWidget {
                       UrlLauncherService.launchURL(
                           'https://www.linkedin.com/in/omrfrkkus');
                     },
-                    icon: const FaIcon(FontAwesomeIcons.linkedin),
+                    icon: const FaIcon(FontAwesomeIcons.linkedin, size: 20),
                     label: const Text('LinkedIn'),
                     style: ElevatedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 18),
+                          vertical: 12.0, horizontal: 24.0),
+                      textStyle: const TextStyle(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -141,12 +143,13 @@ class Contact extends StatelessWidget {
                       UrlLauncherService.launchURL(
                           'https://github.com/omrfrkkus');
                     },
-                    icon: const FaIcon(FontAwesomeIcons.github),
+                    icon: const FaIcon(FontAwesomeIcons.github, size: 20),
                     label: const Text('GitHub'),
                     style: ElevatedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 18),
+                          vertical: 12.0, horizontal: 24.0),
+                      textStyle: const TextStyle(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),
@@ -156,12 +159,13 @@ class Contact extends StatelessWidget {
                       UrlLauncherService.launchURL(
                           'https://www.instagram.com/omrfrkkus');
                     },
-                    icon: const FaIcon(FontAwesomeIcons.instagram),
+                    icon: const FaIcon(FontAwesomeIcons.instagram, size: 20),
                     label: const Text('Instagram'),
                     style: ElevatedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(48),
                       padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 24.0),
-                      textStyle: const TextStyle(fontSize: 18),
+                          vertical: 12.0, horizontal: 24.0),
+                      textStyle: const TextStyle(fontSize: 20),
                       shape: const StadiumBorder(),
                     ),
                   ),

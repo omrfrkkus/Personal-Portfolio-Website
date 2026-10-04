@@ -7,7 +7,7 @@
   "@about_me_text": {
     "description": "Short personal introduction shown in the About Me section."
   },
-  "about_me_text": "Jestem wszechstronnym inżynierem oprogramowania z pasją do tworzenia solidnych, kompleksowych produktów (end-to-end). Posiadając silne fundamenty w dziedzinie sztucznej inteligencji i programowania wieloplatformowego, szybko adaptuję się do nowych technologii, by rozwiązywać złożone problemy. Od wdrażania skalowalnych aplikacji mobilnych i interaktywnych gier 2D po inżynierię robotyki napędzanej przez AI oraz systemów wbudowanych – wykorzystuję różnorodny stos technologiczny (Python, C++, Flutter, Godot), aby przekształcać ambitne koncepcje w działającą rzeczywistość.",
+  "about_me_text": "Jestem inżynierem oprogramowania z pasją do tworzenia solidnych, kompleksowych produktów (end-to-end). Posiadając silne fundamenty w dziedzinie sztucznej inteligencji i programowania wieloplatformowego, szybko adaptuję się do nowych technologii, by rozwiązywać złożone problemy. Od wdrażania skalowalnych aplikacji mobilnych i interaktywnych gier 2D po inżynierię robotyki napędzanej przez AI oraz systemów wbudowanych – wykorzystuję różnorodny stos technologiczny (Python, C++, Flutter, Godot), aby przekształcać ambitne koncepcje w działającą rzeczywistość.",
   "@about": {
     "description": "About section navigation label."
   },

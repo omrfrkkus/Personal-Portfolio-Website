@@ -306,7 +306,43 @@ class Projects extends StatelessWidget {
                           ),
                           const SizedBox(height: 15),
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 16),
+                            padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
+                            child: actions,
+                          ),
+                        ],
+                      );
+                    }
+
+                    if (!desktop) {
+                      return Column(
+                        children: [
+                          Expanded(
+                            child: LayoutBuilder(
+                              builder: (context, viewport) {
+                                return SingleChildScrollView(
+                                  child: ConstrainedBox(
+                                    constraints: BoxConstraints(
+                                      minWidth: viewport.maxWidth,
+                                      minHeight: viewport.maxHeight,
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        gallery,
+                                        const SizedBox(height: 16),
+                                        description,
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(24, 12, 24, 16),
                             child: actions,
                           ),
                         ],
@@ -351,25 +387,51 @@ class Projects extends StatelessWidget {
       onPressed: () => Navigator.pop(context),
       style: TextButton.styleFrom(
         side: BorderSide(color: Theme.of(context).colorScheme.outline),
+        minimumSize: desktop ? null : const Size(0, 48),
+        padding: desktop
+            ? null
+            : const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+        textStyle: desktop ? null : const TextStyle(fontSize: 14),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 48),
+        padding: EdgeInsets.symmetric(horizontal: desktop ? 48 : 0),
         child: Text(AppLocalizations.of(context)!.close),
       ),
     );
     final githubButton = FilledButton.icon(
       onPressed: () => UrlLauncherService.launchURL(project['github']!),
-      icon: const FaIcon(FontAwesomeIcons.github),
-      label: Text(AppLocalizations.of(context)!.view_on_github),
+      icon: FaIcon(FontAwesomeIcons.github, size: desktop ? null : 18),
+      label: desktop
+          ? Text(AppLocalizations.of(context)!.view_on_github)
+          : FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(AppLocalizations.of(context)!.view_on_github),
+            ),
+      style: desktop
+          ? null
+          : FilledButton.styleFrom(
+              minimumSize: const Size(0, 48),
+              padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+              textStyle: const TextStyle(fontSize: 14),
+            ),
     );
 
-    return Flex(
-      direction: desktop ? Axis.horizontal : Axis.vertical,
-      mainAxisSize: MainAxisSize.min,
+    if (desktop) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          closeButton,
+          const SizedBox(width: 8),
+          githubButton,
+        ],
+      );
+    }
+
+    return Row(
       children: [
-        if (desktop) closeButton else githubButton,
-        SizedBox(width: desktop ? 8 : 0, height: desktop ? 0 : 4),
-        if (desktop) githubButton else closeButton,
+        Expanded(child: closeButton),
+        const SizedBox(width: 12),
+        Expanded(child: githubButton),
       ],
     );
   }
