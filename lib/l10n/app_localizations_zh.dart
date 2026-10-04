@@ -34,6 +34,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get hey => '你好，我是';
 
   @override
+  String get software_engineer => '软件工程师';
+
+  @override
   String get resume => '查看简历';
 
   @override

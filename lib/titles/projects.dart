@@ -278,6 +278,9 @@ class Projects extends StatelessWidget {
   ) {
     final closeButton = TextButton(
       onPressed: () => Navigator.pop(context),
+      style: TextButton.styleFrom(
+        side: BorderSide(color: Theme.of(context).colorScheme.outline),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 48),
         child: Text(AppLocalizations.of(context)!.close),

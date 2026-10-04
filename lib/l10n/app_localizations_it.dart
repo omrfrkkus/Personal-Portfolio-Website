@@ -35,6 +35,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get hey => 'CIAO, SONO';
 
   @override
+  String get software_engineer => 'Ingegnere del Software';
+
+  @override
   String get resume => 'Vedi CV';
 
   @override

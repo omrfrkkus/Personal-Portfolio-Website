@@ -35,6 +35,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get hey => 'สวัสดี ฉันคือ';
 
   @override
+  String get software_engineer => 'วิศวกรซอฟต์แวร์';
+
+  @override
   String get resume => 'ดูเรซูเม่';
 
   @override

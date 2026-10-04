@@ -35,6 +35,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get hey => 'ПРИВІТ, Я';
 
   @override
+  String get software_engineer => 'Інженер-програміст';
+
+  @override
   String get resume => 'Переглянути резюме';
 
   @override

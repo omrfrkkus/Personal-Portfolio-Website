@@ -34,6 +34,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get hey => '안녕하세요, 저는';
 
   @override
+  String get software_engineer => '소프트웨어 엔지니어';
+
+  @override
   String get resume => '이력서 보기';
 
   @override

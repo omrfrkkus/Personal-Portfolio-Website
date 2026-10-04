@@ -35,6 +35,9 @@ class AppLocalizationsRu extends AppLocalizations {
   String get hey => 'ПРИВЕТ, Я';
 
   @override
+  String get software_engineer => 'Инженер-программист';
+
+  @override
   String get resume => 'Посмотреть резюме';
 
   @override

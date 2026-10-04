@@ -35,6 +35,9 @@ class AppLocalizationsTl extends AppLocalizations {
   String get hey => 'HELLO, AKO SI';
 
   @override
+  String get software_engineer => 'Software Engineer';
+
+  @override
   String get resume => 'Tingnan ang Resume';
 
   @override

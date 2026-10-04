@@ -35,6 +35,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get hey => 'XIN CHÀO, TÔI LÀ';
 
   @override
+  String get software_engineer => 'Kỹ sư phần mềm';
+
+  @override
   String get resume => 'Xem Hồ sơ';
 
   @override

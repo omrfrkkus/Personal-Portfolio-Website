@@ -35,6 +35,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get hey => 'হ্যালো, আমি';
 
   @override
+  String get software_engineer => 'সফটওয়্যার ইঞ্জিনিয়ার';
+
+  @override
   String get resume => 'রেজ্যুমে দেখুন';
 
   @override

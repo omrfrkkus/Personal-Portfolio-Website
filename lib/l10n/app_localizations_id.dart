@@ -35,6 +35,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get hey => 'HALO, SAYA';
 
   @override
+  String get software_engineer => 'Insinyur Perangkat Lunak';
+
+  @override
   String get resume => 'Lihat Resume';
 
   @override

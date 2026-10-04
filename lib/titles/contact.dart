@@ -53,7 +53,7 @@ class Contact extends StatelessWidget {
                         shape: const StadiumBorder(),
                       ),
                     ),
-                    const SizedBox(width: 24),
+                    const SizedBox(width: 32),
                     ElevatedButton.icon(
                       onPressed: () {
                         UrlLauncherService.launchURL(
@@ -68,7 +68,7 @@ class Contact extends StatelessWidget {
                         shape: const StadiumBorder(),
                       ),
                     ),
-                    const SizedBox(width: 24),
+                    const SizedBox(width: 32),
                     ElevatedButton.icon(
                       onPressed: () {
                         UrlLauncherService.launchURL(
@@ -83,7 +83,7 @@ class Contact extends StatelessWidget {
                         shape: const StadiumBorder(),
                       ),
                     ),
-                    const SizedBox(width: 24),
+                    const SizedBox(width: 32),
                     ElevatedButton.icon(
                       onPressed: () {
                         UrlLauncherService.launchURL(
@@ -120,7 +120,7 @@ class Contact extends StatelessWidget {
                       shape: const StadiumBorder(),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   ElevatedButton.icon(
                     onPressed: () {
                       UrlLauncherService.launchURL(
@@ -135,7 +135,7 @@ class Contact extends StatelessWidget {
                       shape: const StadiumBorder(),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   ElevatedButton.icon(
                     onPressed: () {
                       UrlLauncherService.launchURL(
@@ -150,7 +150,7 @@ class Contact extends StatelessWidget {
                       shape: const StadiumBorder(),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   ElevatedButton.icon(
                     onPressed: () {
                       UrlLauncherService.launchURL(

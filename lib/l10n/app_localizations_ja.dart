@@ -34,6 +34,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get hey => 'こんにちは、私は';
 
   @override
+  String get software_engineer => 'ソフトウェアエンジニア';
+
+  @override
   String get resume => '履歴書を見る';
 
   @override

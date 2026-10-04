@@ -188,6 +188,12 @@ abstract class AppLocalizations {
   /// **'HELLO, I\'M'**
   String get hey;
 
+  /// No description provided for @software_engineer.
+  ///
+  /// In en, this message translates to:
+  /// **'Software Engineer'**
+  String get software_engineer;
+
   /// No description provided for @resume.
   ///
   /// In en, this message translates to:

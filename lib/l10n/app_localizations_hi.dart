@@ -35,6 +35,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get hey => 'नमस्ते, मैं हूँ';
 
   @override
+  String get software_engineer => 'सॉफ़्टवेयर इंजीनियर';
+
+  @override
   String get resume => 'रेज़्यूमे देखें';
 
   @override

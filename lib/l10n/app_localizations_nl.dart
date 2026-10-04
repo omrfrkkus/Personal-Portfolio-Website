@@ -35,6 +35,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get hey => 'HALLO, IK BEN';
 
   @override
+  String get software_engineer => 'Software-engineer';
+
+  @override
   String get resume => 'Bekijk CV';
 
   @override

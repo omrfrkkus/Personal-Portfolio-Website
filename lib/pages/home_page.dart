@@ -58,6 +58,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  ButtonStyle _contactIconStyle(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return IconButton.styleFrom(
+      side: BorderSide(color: colorScheme.outline),
+      shape: const CircleBorder(),
+    );
+  }
+
   Widget _languageDropdown(LocaleService localeService) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
@@ -178,6 +186,17 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ],
                         ),
+                        const SizedBox(height: 4),
+                        Text(
+                          AppLocalizations.of(context)!.software_engineer,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium
+                              ?.copyWith(
+                                color: Theme.of(context).colorScheme.primary,
+                                letterSpacing: 1.2,
+                              ),
+                        ),
                         const SizedBox(height: 16),
                         Wrap(
                           alignment: WrapAlignment.center,
@@ -202,11 +221,12 @@ class _HomePageState extends State<HomePage> {
                             )
                           ],
                         ),
+                        const SizedBox(height: 12),
                         Wrap(
                           alignment: WrapAlignment.center,
                           crossAxisAlignment: WrapCrossAlignment.center,
-                          spacing: 4,
-                          runSpacing: 4,
+                          spacing: 12,
+                          runSpacing: 12,
                           children: [
                             IconButton(
                                 iconSize: 24,
@@ -215,6 +235,7 @@ class _HomePageState extends State<HomePage> {
                                   minWidth: 52,
                                   minHeight: 52,
                                 ),
+                                style: _contactIconStyle(context),
                                 onPressed: () {
                                   _launchURL('https://github.com/omrfrkkus');
                                 },
@@ -226,6 +247,7 @@ class _HomePageState extends State<HomePage> {
                                   minWidth: 52,
                                   minHeight: 52,
                                 ),
+                                style: _contactIconStyle(context),
                                 onPressed: () {
                                   _launchURL(
                                       'https://www.linkedin.com/in/omrfrkkus');
@@ -238,6 +260,7 @@ class _HomePageState extends State<HomePage> {
                                   minWidth: 52,
                                   minHeight: 52,
                                 ),
+                                style: _contactIconStyle(context),
                                 onPressed: () {
                                   _launchURL(
                                       'mailto:omerfaruk.kus@outlook.com');
@@ -250,6 +273,7 @@ class _HomePageState extends State<HomePage> {
                                   minWidth: 52,
                                   minHeight: 52,
                                 ),
+                                style: _contactIconStyle(context),
                                 onPressed: () {
                                   _launchURL(
                                       'https://www.instagram.com/omrfrkkus');
