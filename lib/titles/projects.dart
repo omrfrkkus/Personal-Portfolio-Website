@@ -67,105 +67,176 @@ class Projects extends StatelessWidget {
         Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(maxWidth: isDesktop ? 1200 : 700),
-            child: GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              padding: EdgeInsets.all(isDesktop ? 32 : 16),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: isDesktop ? 2 : 1,
-                crossAxisSpacing: 24,
-                mainAxisSpacing: 24,
-                childAspectRatio: isDesktop ? 1.0 : 0.75,
-              ),
-              itemCount: projects.length,
-              itemBuilder: (context, index) {
-                final project = projects[index];
-                final isDynamicThumbnail =
-                    project['key'] == 'pencil' || project['key'] == 'speaker';
-                return Padding(
-                  padding: EdgeInsets.all(isDesktop ? 24 : 8),
-                  child: Card(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    child: InkWell(
-                      onTap: () => _showProjectDialog(context, project),
-                      child: Padding(
-                        padding: EdgeInsets.all(isDesktop ? 16 : 12),
+            child: isDesktop
+                ? GridView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    padding: const EdgeInsets.all(32),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 24,
+                      mainAxisSpacing: 24,
+                      childAspectRatio: 1.0,
+                    ),
+                    itemCount: projects.length,
+                    itemBuilder: (context, index) => _projectCard(
+                      context,
+                      projects[index],
+                      isDesktop: true,
+                    ),
+                  )
+                : LayoutBuilder(
+                    builder: (context, constraints) {
+                      // Mirror the previous mobile grid cell height so portrait
+                      // thumbnails keep their size, while landscape thumbnails
+                      // (pencil/speaker) hug their own aspect ratio.
+                      final cellHeight = (constraints.maxWidth - 32) / 0.75;
+                      return Padding(
+                        padding: const EdgeInsets.all(16),
                         child: Column(
-                          mainAxisAlignment: isDynamicThumbnail
-                              ? MainAxisAlignment.start
-                              : MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
-                                height: isDynamicThumbnail
-                                    ? 0
-                                    : (isDesktop ? 16 : 8)),
-                            if (isDynamicThumbnail)
-                              Expanded(
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: ConstrainedBox(
-                                    constraints: BoxConstraints(
-                                      maxHeight: isDesktop ? 300 : 280,
-                                    ),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(24),
-                                      child: Image.asset(
-                                        project['image']!,
-                                        width: double.infinity,
-                                        fit: BoxFit.contain,
-                                      ),
-                                    ),
+                            for (var i = 0; i < projects.length; i++) ...[
+                              if (i > 0) const SizedBox(height: 24),
+                              if (_isDynamicThumbnail(projects[i]))
+                                _projectCard(
+                                  context,
+                                  projects[i],
+                                  isDesktop: false,
+                                )
+                              else
+                                SizedBox(
+                                  height: cellHeight,
+                                  child: _projectCard(
+                                    context,
+                                    projects[i],
+                                    isDesktop: false,
                                   ),
                                 ),
-                              )
-                            else
-                              Expanded(
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(24),
-                                  child: Image.asset(
-                                    project['image']!,
-                                    fit: isDesktop
-                                        ? BoxFit.cover
-                                        : BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            const SizedBox(height: 16),
-                            SelectableText(
-                              project['title']!,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            Text(
-                              AppLocalizations.of(context)!
-                                  .project_description(project['key']!),
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              AppLocalizations.of(context)!.click_more,
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary,
-                                decoration: TextDecoration.underline,
-                              ),
-                            ),
+                            ],
                           ],
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
           ),
         ),
       ],
+    );
+  }
+
+  bool _isDynamicThumbnail(Map<String, String> project) {
+    return project['key'] == 'pencil' || project['key'] == 'speaker';
+  }
+
+  Widget _projectCard(
+    BuildContext context,
+    Map<String, String> project, {
+    required bool isDesktop,
+  }) {
+    final isDynamicThumbnail = _isDynamicThumbnail(project);
+    return Padding(
+      padding: EdgeInsets.all(isDesktop ? 24 : 8),
+      child: Card(
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: InkWell(
+          onTap: () => _showProjectDialog(context, project),
+          child: Padding(
+            padding: EdgeInsets.all(isDesktop ? 16 : 12),
+            child: Column(
+              mainAxisSize: isDesktop || !isDynamicThumbnail
+                  ? MainAxisSize.max
+                  : MainAxisSize.min,
+              mainAxisAlignment: isDynamicThumbnail
+                  ? MainAxisAlignment.start
+                  : MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: isDynamicThumbnail ? 0 : (isDesktop ? 16 : 8)),
+                _projectThumbnail(
+                  project['image']!,
+                  isDesktop: isDesktop,
+                  isDynamicThumbnail: isDynamicThumbnail,
+                ),
+                const SizedBox(height: 16),
+                SelectableText(
+                  project['title']!,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  AppLocalizations.of(context)!
+                      .project_description(project['key']!),
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  AppLocalizations.of(context)!.click_more,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _projectThumbnail(
+    String image, {
+    required bool isDesktop,
+    required bool isDynamicThumbnail,
+  }) {
+    if (isDynamicThumbnail && !isDesktop) {
+      // Mobile: size the landscape thumbnail by its own aspect ratio so the
+      // card hugs it instead of centering it in a tall cell with letterboxing.
+      // A small inset keeps a little breathing room from the card corners.
+      return Padding(
+        padding: const EdgeInsets.all(8),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(24),
+          child: Image.asset(
+            image,
+            width: double.infinity,
+            fit: BoxFit.contain,
+          ),
+        ),
+      );
+    }
+    if (isDynamicThumbnail) {
+      return Expanded(
+        child: Align(
+          alignment: Alignment.center,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 300),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Image.asset(
+                image,
+                width: double.infinity,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+    return Expanded(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(24),
+        child: Image.asset(
+          image,
+          fit: isDesktop ? BoxFit.cover : BoxFit.contain,
+        ),
+      ),
     );
   }
 
