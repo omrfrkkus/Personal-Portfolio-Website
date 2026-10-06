@@ -87,22 +87,39 @@ class _HomePageState extends State<HomePage> {
             .map(
               (language) => DropdownMenuItem<String>(
                 value: language.code,
-                child: Row(
-                  children: [
-                    CountryFlag.fromCountryCode(
-                      language.countryCode,
-                      width: 24,
-                      height: 16,
-                      shape: const RoundedRectangle(3),
-                    ),
-                    const SizedBox(width: 6),
-                    Text(language.name),
-                  ],
-                ),
+                child: _languageEntry(language),
               ),
             )
             .toList(),
+        // DropdownButton lays every entry out to size its closed state, so it
+        // would otherwise fetch all 23 flags plus the font fallbacks for
+        // scripts such as Japanese, Korean or Arabic on the first frame. Only
+        // the selected entry is visible, so the rest stay empty until the menu
+        // is opened.
+        selectedItemBuilder: (context) => [
+          for (final language in _languageOptions)
+            language.code == localeService.currentLocale.languageCode
+                ? _languageEntry(language)
+                : const SizedBox.shrink(),
+        ],
       ),
+    );
+  }
+
+  Widget _languageEntry(
+    ({String code, String countryCode, String name}) language,
+  ) {
+    return Row(
+      children: [
+        CountryFlag.fromCountryCode(
+          language.countryCode,
+          width: 24,
+          height: 16,
+          shape: const RoundedRectangle(3),
+        ),
+        const SizedBox(width: 6),
+        Text(language.name),
+      ],
     );
   }
 

@@ -16,7 +16,7 @@ class Gorilla extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (_, index) {
             return Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
+              clipBehavior: Clip.antiAlias,
               child: Image.asset('images/pixel$index.png'),
             );
           },

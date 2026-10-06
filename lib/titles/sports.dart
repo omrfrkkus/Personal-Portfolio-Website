@@ -38,7 +38,7 @@ class Sports extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: isDesktop ? 48 : 24),
           child: Card(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
+            clipBehavior: Clip.antiAlias,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,7 +58,7 @@ class Sports extends StatelessWidget {
                                 maxHeight: 400,
                               ),
                               child: Card(
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
+                                clipBehavior: Clip.antiAlias,
                                 child: Image.asset(
                                   'images/dip.png',
                                   fit: BoxFit.contain,
@@ -72,7 +72,7 @@ class Sports extends StatelessWidget {
                                 maxHeight: 400,
                               ), // Resmin maksimum genişliği
                               child: Card(
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
+                                clipBehavior: Clip.antiAlias,
                                 child: Image.asset(
                                   'images/flag.png',
                                   fit: BoxFit.contain,
@@ -87,7 +87,7 @@ class Sports extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Card(
-                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              clipBehavior: Clip.antiAlias,
                               child: Image.asset(
                                 'images/dip.png',
                                 fit: BoxFit.contain,
@@ -95,7 +95,7 @@ class Sports extends StatelessWidget {
                             ),
                             const SizedBox(height: 16),
                             Card(
-                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              clipBehavior: Clip.antiAlias,
                               child: Image.asset(
                                 'images/flag.png',
                                 fit: BoxFit.contain,

@@ -79,6 +79,9 @@
     }
   </script>
 
+  <!-- Flutter loads CanvasKit from gstatic; open the connection while the page parses. -->
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+
   <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/montserrat-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 

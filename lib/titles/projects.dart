@@ -138,7 +138,7 @@ class Projects extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(isDesktop ? 24 : 8),
       child: Card(
-        clipBehavior: Clip.antiAliasWithSaveLayer,
+        clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: () => _showProjectDialog(context, project),
           child: Padding(
@@ -198,16 +198,12 @@ class Projects extends StatelessWidget {
     if (isDynamicThumbnail && !isDesktop) {
       // Mobile: size the landscape thumbnail by its own aspect ratio so the
       // card hugs it instead of centering it in a tall cell with letterboxing.
-      // A small inset keeps a little breathing room from the card corners.
+      // Pinning the ratio keeps the card height stable from the first frame.
       return Padding(
         padding: const EdgeInsets.all(8),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(24),
-          child: Image.asset(
-            image,
-            width: double.infinity,
-            fit: BoxFit.contain,
-          ),
+        child: AspectRatio(
+          aspectRatio: 16 / 9,
+          child: _projectImage(image),
         ),
       );
     }
@@ -217,25 +213,27 @@ class Projects extends StatelessWidget {
           alignment: Alignment.center,
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxHeight: 300),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(24),
-              child: Image.asset(
-                image,
-                width: double.infinity,
-                fit: BoxFit.contain,
-              ),
-            ),
+            child: _projectImage(image),
           ),
         ),
       );
     }
     return Expanded(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(24),
-        child: Image.asset(
-          image,
-          fit: isDesktop ? BoxFit.cover : BoxFit.contain,
-        ),
+      child: _projectImage(
+        image,
+        fit: isDesktop ? BoxFit.cover : BoxFit.contain,
+      ),
+    );
+  }
+
+  /// The rounded clip and the repaint boundary keep the (often animated)
+  /// thumbnail in its own layer instead of repainting the whole page for
+  /// every frame.
+  Widget _projectImage(String image, {BoxFit fit = BoxFit.contain}) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(24),
+      child: RepaintBoundary(
+        child: Image.asset(image, fit: fit),
       ),
     );
   }

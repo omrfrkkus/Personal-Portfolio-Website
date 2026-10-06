@@ -18,7 +18,7 @@ class Johnny extends StatelessWidget {
       itemCount: _assets.length,
       itemBuilder: (_, index) {
         return Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
+          clipBehavior: Clip.antiAlias,
           child: Image.asset(
             _assets[index],
             errorBuilder: (_, __, ___) => const SizedBox(

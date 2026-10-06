@@ -12,7 +12,7 @@ class Adam extends StatelessWidget {
       itemCount: 3,
       itemBuilder: (_, index) {
         return Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
+          clipBehavior: Clip.antiAlias,
           child: Image.asset('images/adam$index.jpg'),
         );
       },

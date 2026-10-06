@@ -147,9 +147,10 @@ class _ProjectImageGridState extends State<ProjectImageGrid> {
         final galleryHeight = contentHeight < availableHeight
             ? contentHeight
             : availableHeight.clamp(180.0, widget.height).toDouble();
+        // Not shrinkWrapped on purpose: the height is fixed below, so the grid
+        // only builds and decodes the tiles that are actually on screen.
         final grid = GridView.builder(
           controller: _scrollController,
-          shrinkWrap: true,
           padding: EdgeInsets.fromLTRB(16, 16, 16, isDesktop ? 16 : 22),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: columnCount,
@@ -159,11 +160,13 @@ class _ProjectImageGridState extends State<ProjectImageGrid> {
           ),
           itemCount: widget.assets.length,
           itemBuilder: (_, index) {
-            return Card(
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Image.asset(
-                widget.assets[index],
-                fit: isDesktop ? BoxFit.contain : BoxFit.cover,
+            return RepaintBoundary(
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  widget.assets[index],
+                  fit: isDesktop ? BoxFit.contain : BoxFit.cover,
+                ),
               ),
             );
           },
